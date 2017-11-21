@@ -48,22 +48,14 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate operation.
-     * @callback module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SimilarityInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create a word similarity entity extractor.
      * Create a new word similarity entity extractor or load one from the store.
      * @param {module:model/SimilarityEntCreateDetails} similarityEntCreateDetails The details of the instance to create.
-     * @param {module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SimilarityInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetail} and HTTP response
      */
-    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate = function(similarityEntCreateDetails, callback) {
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateWithHttpInfo = function(similarityEntCreateDetails) {
       var postBody = similarityEntCreateDetails;
 
       // verify the required parameter 'similarityEntCreateDetails' is set
@@ -89,26 +81,31 @@
       return this.apiClient.callApi(
         '/similarity_entity_extractors', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails operation.
-     * @callback module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SimilarityInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a word similarity entity extractor.
+     * Create a new word similarity entity extractor or load one from the store.
+     * @param {module:model/SimilarityEntCreateDetails} similarityEntCreateDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetail}
      */
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate = function(similarityEntCreateDetails) {
+      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateWithHttpInfo(similarityEntCreateDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named similarity entity extractor instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SimilarityInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetail} and HTTP response
      */
-    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails = function(instanceName, callback) {
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -135,25 +132,30 @@
       return this.apiClient.callApi(
         '/similarity_entity_extractors/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll operation.
-     * @callback module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SimilarityInstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named similarity entity extractor instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetail}
      */
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails = function(instanceName) {
+      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded similarity entity extractors.
      * Get the list of loaded similarity entity extractors.
-     * @param {module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SimilarityInstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetailList} and HTTP response
      */
-    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll = function(callback) {
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -174,27 +176,31 @@
       return this.apiClient.callApi(
         '/similarity_entity_extractors', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve operation.
-     * @callback module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EntityList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded similarity entity extractors.
+     * Get the list of loaded similarity entity extractors.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetailList}
      */
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll = function() {
+      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Extract information based on word similarity.
      * Extract the word entities that are similar to the list of words used to create this model instance.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Similarity_entity_extractorsApi~controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EntityList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve = function(instanceName, textInput, callback) {
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -226,8 +232,22 @@
       return this.apiClient.callApi(
         '/similarity_entity_extractors/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Extract information based on word similarity.
+     * Extract the word entities that are similar to the list of words used to create this model instance.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
+     */
+    this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve = function(instanceName, textInput) {
+      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

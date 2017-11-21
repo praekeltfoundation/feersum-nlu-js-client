@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierAddTrainingSamples operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierAddTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TotalSamples} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add training samples.
      * Add training samples to named text classifier. Returns the classifier&#39;s updated number of training samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierAddTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TotalSamples}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierAddTrainingSamples = function(instanceName, labelledTextSampleList, callback) {
+    this.controllersTextClassifiersControllerTextClassifierAddTrainingSamplesWithHttpInfo = function(instanceName, labelledTextSampleList) {
       var postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
@@ -96,26 +88,32 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/training_samples', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierCreate operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add training samples.
+     * Add training samples to named text classifier. Returns the classifier&#39;s updated number of training samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
+    this.controllersTextClassifiersControllerTextClassifierAddTrainingSamples = function(instanceName, labelledTextSampleList) {
+      return this.controllersTextClassifiersControllerTextClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a text classifier.
      * Create a new text classifier or load one from the store. Returns the details of the new or loaded instance.
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierCreate = function(createDetails, callback) {
+    this.controllersTextClassifiersControllerTextClassifierCreateWithHttpInfo = function(createDetails) {
       var postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
@@ -141,27 +139,32 @@
       return this.apiClient.callApi(
         '/text_classifiers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierCurate operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierCurateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a text classifier.
+     * Create a new text classifier or load one from the store. Returns the details of the new or loaded instance.
+     * @param {module:model/CreateDetails} createDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersTextClassifiersControllerTextClassifierCreate = function(createDetails) {
+      return this.controllersTextClassifiersControllerTextClassifierCreateWithHttpInfo(createDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Endpoint to aid in the curation of a model instance.
      * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierCurateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierCurate = function(instanceName, labelPair, callback) {
+    this.controllersTextClassifiersControllerTextClassifierCurateWithHttpInfo = function(instanceName, labelPair) {
       var postBody = labelPair;
 
       // verify the required parameter 'instanceName' is set
@@ -193,26 +196,32 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/curate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierDelTrainingSamples operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierDelTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Endpoint to aid in the curation of a model instance.
+     * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersTextClassifiersControllerTextClassifierCurate = function(instanceName, labelPair) {
+      return this.controllersTextClassifiersControllerTextClassifierCurateWithHttpInfo(instanceName, labelPair)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete training samples.
      * Delete the training samples of the named text classifier. Returns the deleted samples.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierDelTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierDelTrainingSamples = function(instanceName, callback) {
+    this.controllersTextClassifiersControllerTextClassifierDelTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -239,26 +248,31 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/training_samples', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierGetDetails operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete training samples.
+     * Delete the training samples of the named text classifier. Returns the deleted samples.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersTextClassifiersControllerTextClassifierDelTrainingSamples = function(instanceName) {
+      return this.controllersTextClassifiersControllerTextClassifierDelTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named text classifier instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierGetDetails = function(instanceName, callback) {
+    this.controllersTextClassifiersControllerTextClassifierGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -285,25 +299,30 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierGetDetailsAll operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named text classifier instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersTextClassifiersControllerTextClassifierGetDetails = function(instanceName) {
+      return this.controllersTextClassifiersControllerTextClassifierGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded text classifiers.
      * Get the list of loaded text classifiers.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetailList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierGetDetailsAll = function(callback) {
+    this.controllersTextClassifiersControllerTextClassifierGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -324,26 +343,30 @@
       return this.apiClient.callApi(
         '/text_classifiers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierGetLabels operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetLabelsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClassLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded text classifiers.
+     * Get the list of loaded text classifiers.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetailList}
      */
+    this.controllersTextClassifiersControllerTextClassifierGetDetailsAll = function() {
+      return this.controllersTextClassifiersControllerTextClassifierGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of possible labels.
      * Returns the classifier&#39;s list of possible class labels.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetLabelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClassLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierGetLabels = function(instanceName, callback) {
+    this.controllersTextClassifiersControllerTextClassifierGetLabelsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -370,26 +393,31 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/get_labels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierGetTrainingSamples operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of possible labels.
+     * Returns the classifier&#39;s list of possible class labels.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
+    this.controllersTextClassifiersControllerTextClassifierGetLabels = function(instanceName) {
+      return this.controllersTextClassifiersControllerTextClassifierGetLabelsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get training samples.
      * Get the training samples of the named text classifier.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierGetTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierGetTrainingSamples = function(instanceName, callback) {
+    this.controllersTextClassifiersControllerTextClassifierGetTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -416,27 +444,32 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/training_samples', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierRetrieve operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ScoredLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get training samples.
+     * Get the training samples of the named text classifier.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersTextClassifiersControllerTextClassifierGetTrainingSamples = function(instanceName) {
+      return this.controllersTextClassifiersControllerTextClassifierGetTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Classify text.
      * Classifies the text and returns a probability sorted list of classes.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ScoredLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierRetrieve = function(instanceName, textInput, callback) {
+    this.controllersTextClassifiersControllerTextClassifierRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -468,27 +501,33 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersTextClassifiersControllerTextClassifierTrain operation.
-     * @callback module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierTrainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Classify text.
+     * Classifies the text and returns a probability sorted list of classes.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
+    this.controllersTextClassifiersControllerTextClassifierRetrieve = function(instanceName, textInput) {
+      return this.controllersTextClassifiersControllerTextClassifierRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Train the named text classifier.
      * Train the named text classifier with the training and testing data already provided. Returns the details of the model instance.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
-     * @param {module:api/Text_classifiersApi~controllersTextClassifiersControllerTextClassifierTrainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersTextClassifiersControllerTextClassifierTrain = function(instanceName, trainDetails, callback) {
+    this.controllersTextClassifiersControllerTextClassifierTrainWithHttpInfo = function(instanceName, trainDetails) {
       var postBody = trainDetails;
 
       // verify the required parameter 'instanceName' is set
@@ -520,8 +559,22 @@
       return this.apiClient.callApi(
         '/text_classifiers/{instance_name}/train', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Train the named text classifier.
+     * Train the named text classifier with the training and testing data already provided. Returns the details of the model instance.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
+     */
+    this.controllersTextClassifiersControllerTextClassifierTrain = function(instanceName, trainDetails) {
+      return this.controllersTextClassifiersControllerTextClassifierTrainWithHttpInfo(instanceName, trainDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

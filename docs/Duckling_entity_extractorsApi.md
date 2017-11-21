@@ -33,15 +33,12 @@ var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
 var ducklingEntCreateDetails = new FeersumNluApi.DucklingEntCreateDetails(); // DucklingEntCreateDetails | The details of the instance to create.
 
+apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(ducklingEntCreateDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(ducklingEntCreateDetails, callback);
 ```
 
 ### Parameters
@@ -86,15 +83,12 @@ var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(instanceName, callback);
 ```
 
 ### Parameters
@@ -136,15 +130,12 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
+apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll(callback);
 ```
 
 ### Parameters
@@ -188,15 +179,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(instanceName, textInput, callback);
 ```
 
 ### Parameters

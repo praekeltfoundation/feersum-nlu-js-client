@@ -42,15 +42,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples(instanceName, labelledTextSampleList, callback);
 ```
 
 ### Parameters
@@ -96,15 +93,12 @@ var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierCreate(createDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierCreate(createDetails, callback);
 ```
 
 ### Parameters
@@ -151,15 +145,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierCurate(instanceName, labelPair).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierCurate(instanceName, labelPair, callback);
 ```
 
 ### Parameters
@@ -205,15 +196,12 @@ var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples(instanceName, callback);
 ```
 
 ### Parameters
@@ -258,15 +246,12 @@ var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetails(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetails(instanceName, callback);
 ```
 
 ### Parameters
@@ -308,15 +293,12 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 var apiInstance = new FeersumNluApi.Intent_classifiersApi();
+apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll(callback);
 ```
 
 ### Parameters
@@ -358,15 +340,12 @@ var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierGetLabels(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetLabels(instanceName, callback);
 ```
 
 ### Parameters
@@ -411,15 +390,12 @@ var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples(instanceName, callback);
 ```
 
 ### Parameters
@@ -466,15 +442,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList, callback);
 ```
 
 ### Parameters
@@ -522,15 +495,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierRetrieve(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierRetrieve(instanceName, textInput, callback);
 ```
 
 ### Parameters
@@ -578,15 +548,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
+apiInstance.controllersIntentClassifiersControllerIntentClassifierTrain(instanceName, trainDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersIntentClassifiersControllerIntentClassifierTrain(instanceName, trainDetails, callback);
 ```
 
 ### Parameters

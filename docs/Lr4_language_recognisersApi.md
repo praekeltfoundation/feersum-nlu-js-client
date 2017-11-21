@@ -34,15 +34,12 @@ var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 var lr4CreateDetails = new FeersumNluApi.Lr4CreateDetails(); // Lr4CreateDetails | The details of the instance to create.
 
+apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(lr4CreateDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(lr4CreateDetails, callback);
 ```
 
 ### Parameters
@@ -87,15 +84,12 @@ var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(instanceName, callback);
 ```
 
 ### Parameters
@@ -137,15 +131,12 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll(callback);
 ```
 
 ### Parameters
@@ -187,15 +178,12 @@ var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(instanceName, callback);
 ```
 
 ### Parameters
@@ -242,15 +230,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(instanceName, textInput, callback);
 ```
 
 ### Parameters

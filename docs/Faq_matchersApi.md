@@ -42,15 +42,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList, callback);
 ```
 
 ### Parameters
@@ -96,15 +93,12 @@ var apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherCreate(createDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherCreate(createDetails, callback);
 ```
 
 ### Parameters
@@ -151,15 +145,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair, callback);
 ```
 
 ### Parameters
@@ -205,15 +196,12 @@ var apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName, callback);
 ```
 
 ### Parameters
@@ -258,15 +246,12 @@ var apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName, callback);
 ```
 
 ### Parameters
@@ -308,15 +293,12 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 var apiInstance = new FeersumNluApi.Faq_matchersApi();
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll(callback);
 ```
 
 ### Parameters
@@ -358,15 +340,12 @@ var apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName, callback);
 ```
 
 ### Parameters
@@ -411,15 +390,12 @@ var apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName, callback);
 ```
 
 ### Parameters
@@ -466,15 +442,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList, callback);
 ```
 
 ### Parameters
@@ -522,15 +495,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput, callback);
 ```
 
 ### Parameters
@@ -578,15 +548,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
+apiInstance.controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails, callback);
 ```
 
 ### Parameters

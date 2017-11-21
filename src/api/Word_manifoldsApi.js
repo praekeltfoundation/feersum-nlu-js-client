@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersWordManifoldsControllerWordManifoldAddSimilarWords operation.
-     * @callback module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldAddSimilarWordsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add new words.
      * Add new words to the manifold that are similar to existing words and save the manifold. Warning! - Because this operation saves the updated word manifold to the store it could take a few seconds to complete. Returns the details of the updated instance.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/NewWordList} newWordList List of new words.
-     * @param {module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldAddSimilarWordsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersWordManifoldsControllerWordManifoldAddSimilarWords = function(instanceName, newWordList, callback) {
+    this.controllersWordManifoldsControllerWordManifoldAddSimilarWordsWithHttpInfo = function(instanceName, newWordList) {
       var postBody = newWordList;
 
       // verify the required parameter 'instanceName' is set
@@ -96,26 +88,32 @@
       return this.apiClient.callApi(
         '/word_manifolds/{instance_name}/vocab', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersWordManifoldsControllerWordManifoldCreate operation.
-     * @callback module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add new words.
+     * Add new words to the manifold that are similar to existing words and save the manifold. Warning! - Because this operation saves the updated word manifold to the store it could take a few seconds to complete. Returns the details of the updated instance.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/NewWordList} newWordList List of new words.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersWordManifoldsControllerWordManifoldAddSimilarWords = function(instanceName, newWordList) {
+      return this.controllersWordManifoldsControllerWordManifoldAddSimilarWordsWithHttpInfo(instanceName, newWordList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a word manifold model.
      * Create a new word manifold model using an input file or load a model from the store. Warning! - These models are quite big and each takes a few seconds to load/create. Returns the details of the new or loaded instance.
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
-     * @param {module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersWordManifoldsControllerWordManifoldCreate = function(createDetails, callback) {
+    this.controllersWordManifoldsControllerWordManifoldCreateWithHttpInfo = function(createDetails) {
       var postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
@@ -141,27 +139,32 @@
       return this.apiClient.callApi(
         '/word_manifolds', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersWordManifoldsControllerWordManifoldGetSimilarWords operation.
-     * @callback module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldGetSimilarWordsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WordAndDistanceList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a word manifold model.
+     * Create a new word manifold model using an input file or load a model from the store. Warning! - These models are quite big and each takes a few seconds to load/create. Returns the details of the new or loaded instance.
+     * @param {module:model/CreateDetails} createDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersWordManifoldsControllerWordManifoldCreate = function(createDetails) {
+      return this.controllersWordManifoldsControllerWordManifoldCreateWithHttpInfo(createDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Find similar words.
      * Returns words from the manifold that are similar to the parameter word.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/WordAndThreshold} wordAndThreshold A word token and an accompanying threshold.
-     * @param {module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldGetSimilarWordsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WordAndDistanceList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WordAndDistanceList} and HTTP response
      */
-    this.controllersWordManifoldsControllerWordManifoldGetSimilarWords = function(instanceName, wordAndThreshold, callback) {
+    this.controllersWordManifoldsControllerWordManifoldGetSimilarWordsWithHttpInfo = function(instanceName, wordAndThreshold) {
       var postBody = wordAndThreshold;
 
       // verify the required parameter 'instanceName' is set
@@ -193,27 +196,33 @@
       return this.apiClient.callApi(
         '/word_manifolds/{instance_name}/similar_words', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersWordManifoldsControllerWordManifoldSpellCorrect operation.
-     * @callback module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldSpellCorrectCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WordAndDistanceList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Find similar words.
+     * Returns words from the manifold that are similar to the parameter word.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/WordAndThreshold} wordAndThreshold A word token and an accompanying threshold.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WordAndDistanceList}
      */
+    this.controllersWordManifoldsControllerWordManifoldGetSimilarWords = function(instanceName, wordAndThreshold) {
+      return this.controllersWordManifoldsControllerWordManifoldGetSimilarWordsWithHttpInfo(instanceName, wordAndThreshold)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Spell correct a word.
      * Spell correct a word replacing it with the most likely word from the manifold. Returns one or more scored candidate words.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Word_manifoldsApi~controllersWordManifoldsControllerWordManifoldSpellCorrectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WordAndDistanceList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WordAndDistanceList} and HTTP response
      */
-    this.controllersWordManifoldsControllerWordManifoldSpellCorrect = function(instanceName, textInput, callback) {
+    this.controllersWordManifoldsControllerWordManifoldSpellCorrectWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -245,8 +254,22 @@
       return this.apiClient.callApi(
         '/word_manifolds/{instance_name}/spell_correct', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Spell correct a word.
+     * Spell correct a word replacing it with the most likely word from the manifold. Returns one or more scored candidate words.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WordAndDistanceList}
+     */
+    this.controllersWordManifoldsControllerWordManifoldSpellCorrect = function(instanceName, textInput) {
+      return this.controllersWordManifoldsControllerWordManifoldSpellCorrectWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

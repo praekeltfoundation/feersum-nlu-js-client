@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherAddTrainingSamples operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TotalSamples} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add training samples.
      * Add training samples to named faq matcher. Returns the FAQ matcher&#39;s updated number of training samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TotalSamples}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples = function(instanceName, labelledTextSampleList, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesWithHttpInfo = function(instanceName, labelledTextSampleList) {
       var postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
@@ -96,26 +88,32 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/training_samples', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherCreate operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add training samples.
+     * Add training samples to named faq matcher. Returns the FAQ matcher&#39;s updated number of training samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
+    this.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples = function(instanceName, labelledTextSampleList) {
+      return this.controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create an FAQ matcher.
      * Create a new faq matcher or load one from the store. Returns the details of the new or loaded instance.
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherCreate = function(createDetails, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherCreateWithHttpInfo = function(createDetails) {
       var postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
@@ -141,27 +139,32 @@
       return this.apiClient.callApi(
         '/faq_matchers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherCurate operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherCurateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create an FAQ matcher.
+     * Create a new faq matcher or load one from the store. Returns the details of the new or loaded instance.
+     * @param {module:model/CreateDetails} createDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersFaqMatchersControllerFaqMatcherCreate = function(createDetails) {
+      return this.controllersFaqMatchersControllerFaqMatcherCreateWithHttpInfo(createDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Endpoint to aid in the curation of a model instance.
      * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherCurateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherCurate = function(instanceName, labelPair, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherCurateWithHttpInfo = function(instanceName, labelPair) {
       var postBody = labelPair;
 
       // verify the required parameter 'instanceName' is set
@@ -193,26 +196,32 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/curate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherDelTrainingSamples operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Endpoint to aid in the curation of a model instance.
+     * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherCurate = function(instanceName, labelPair) {
+      return this.controllersFaqMatchersControllerFaqMatcherCurateWithHttpInfo(instanceName, labelPair)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete training samples.
      * Delete the training samples of the named FAQ matcher. Returns the deleted samples.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples = function(instanceName, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -239,26 +248,31 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/training_samples', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherGetDetails operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete training samples.
+     * Delete the training samples of the named FAQ matcher. Returns the deleted samples.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples = function(instanceName) {
+      return this.controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named FAQ matcher instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherGetDetails = function(instanceName, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -285,25 +299,30 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherGetDetailsAll operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named FAQ matcher instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersFaqMatchersControllerFaqMatcherGetDetails = function(instanceName) {
+      return this.controllersFaqMatchersControllerFaqMatcherGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded FAQ matchers.
      * Returns the list of loaded faq matchers.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetailList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherGetDetailsAll = function(callback) {
+    this.controllersFaqMatchersControllerFaqMatcherGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -324,26 +343,30 @@
       return this.apiClient.callApi(
         '/faq_matchers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherGetLabels operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetLabelsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClassLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded FAQ matchers.
+     * Returns the list of loaded faq matchers.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetailList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherGetDetailsAll = function() {
+      return this.controllersFaqMatchersControllerFaqMatcherGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of possible labels.
      * Returns the classifier&#39;s list of possible class labels.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetLabelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClassLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherGetLabels = function(instanceName, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherGetLabelsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -370,26 +393,31 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/get_labels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherGetTrainingSamples operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of possible labels.
+     * Returns the classifier&#39;s list of possible class labels.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherGetLabels = function(instanceName) {
+      return this.controllersFaqMatchersControllerFaqMatcherGetLabelsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get training samples.
      * Returns the training samples of the named faq matcher.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples = function(instanceName, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -416,27 +444,32 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/training_samples', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TotalSamples} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get training samples.
+     * Returns the training samples of the named faq matcher.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples = function(instanceName) {
+      return this.controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Train/update the classifier online with the samples provided.
      * Train/update the classifier online with the samples provided. This operation is more efficient than a full re-train. Returns the classifier&#39;s updated number of training samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TotalSamples}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples = function(instanceName, labelledTextSampleList, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesWithHttpInfo = function(instanceName, labelledTextSampleList) {
       var postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
@@ -468,27 +501,33 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/online_training_samples', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherRetrieve operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ScoredLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Train/update the classifier online with the samples provided.
+     * Train/update the classifier online with the samples provided. This operation is more efficient than a full re-train. Returns the classifier&#39;s updated number of training samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
+    this.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples = function(instanceName, labelledTextSampleList) {
+      return this.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Match retrieve and FAQ.
      * Matchers the FAQ and returns a probability sorted list of answer labels.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ScoredLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherRetrieve = function(instanceName, textInput, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -520,27 +559,33 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersFaqMatchersControllerFaqMatcherTrain operation.
-     * @callback module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherTrainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Match retrieve and FAQ.
+     * Matchers the FAQ and returns a probability sorted list of answer labels.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
+    this.controllersFaqMatchersControllerFaqMatcherRetrieve = function(instanceName, textInput) {
+      return this.controllersFaqMatchersControllerFaqMatcherRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Train the named FAQ matcher.
      * Train the named FAQ matcher with the training and testing data already provided. Returns the updated instance detail.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
-     * @param {module:api/Faq_matchersApi~controllersFaqMatchersControllerFaqMatcherTrainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersFaqMatchersControllerFaqMatcherTrain = function(instanceName, trainDetails, callback) {
+    this.controllersFaqMatchersControllerFaqMatcherTrainWithHttpInfo = function(instanceName, trainDetails) {
       var postBody = trainDetails;
 
       // verify the required parameter 'instanceName' is set
@@ -572,8 +617,22 @@
       return this.apiClient.callApi(
         '/faq_matchers/{instance_name}/train', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Train the named FAQ matcher.
+     * Train the named FAQ matcher with the training and testing data already provided. Returns the updated instance detail.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
+     */
+    this.controllersFaqMatchersControllerFaqMatcherTrain = function(instanceName, trainDetails) {
+      return this.controllersFaqMatchersControllerFaqMatcherTrainWithHttpInfo(instanceName, trainDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

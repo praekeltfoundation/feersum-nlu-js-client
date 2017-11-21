@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersDateParsersControllerDateParserRetrieve operation.
-     * @callback module:api/Date_parsersApi~controllersDateParsersControllerDateParserRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DateList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Extract dates.
      * Parses one or more dates from text.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Date_parsersApi~controllersDateParsersControllerDateParserRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DateList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DateList} and HTTP response
      */
-    this.controllersDateParsersControllerDateParserRetrieve = function(instanceName, textInput, callback) {
+    this.controllersDateParsersControllerDateParserRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -96,8 +88,22 @@
       return this.apiClient.callApi(
         '/date_parsers/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Extract dates.
+     * Parses one or more dates from text.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DateList}
+     */
+    this.controllersDateParsersControllerDateParserRetrieve = function(instanceName, textInput) {
+      return this.controllersDateParsersControllerDateParserRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

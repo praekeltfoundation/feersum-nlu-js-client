@@ -48,22 +48,14 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate operation.
-     * @callback module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Lr4InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create a LR4 text language detector.
      * Create a new LR4 language detector from the pre-trained model name provided. &#39;lid_za&#39; is currently the only pre-trained model that is available, but it was trained on all 11 languages and is pretty accurate. Returns the detail of the new instance.
      * @param {module:model/Lr4CreateDetails} lr4CreateDetails The details of the instance to create.
-     * @param {module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Lr4InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetail} and HTTP response
      */
-    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate = function(lr4CreateDetails, callback) {
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateWithHttpInfo = function(lr4CreateDetails) {
       var postBody = lr4CreateDetails;
 
       // verify the required parameter 'lr4CreateDetails' is set
@@ -89,26 +81,31 @@
       return this.apiClient.callApi(
         '/lr4_language_recognisers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails operation.
-     * @callback module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Lr4InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a LR4 text language detector.
+     * Create a new LR4 language detector from the pre-trained model name provided. &#39;lid_za&#39; is currently the only pre-trained model that is available, but it was trained on all 11 languages and is pretty accurate. Returns the detail of the new instance.
+     * @param {module:model/Lr4CreateDetails} lr4CreateDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetail}
      */
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate = function(lr4CreateDetails) {
+      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateWithHttpInfo(lr4CreateDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named LR4 text language detector instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Lr4InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetail} and HTTP response
      */
-    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails = function(instanceName, callback) {
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -135,25 +132,30 @@
       return this.apiClient.callApi(
         '/lr4_language_recognisers/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll operation.
-     * @callback module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Lr4InstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named LR4 text language detector instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetail}
      */
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails = function(instanceName) {
+      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded LR4 text language detectors.
      * Get the list of loaded LR4 text language detectors.
-     * @param {module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Lr4InstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetailList} and HTTP response
      */
-    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll = function(callback) {
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -174,26 +176,30 @@
       return this.apiClient.callApi(
         '/lr4_language_recognisers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels operation.
-     * @callback module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClassLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded LR4 text language detectors.
+     * Get the list of loaded LR4 text language detectors.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetailList}
      */
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll = function() {
+      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of possible labels.
      * Returns the classifier&#39;s list of possible class labels.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClassLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels = function(instanceName, callback) {
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -220,27 +226,32 @@
       return this.apiClient.callApi(
         '/lr4_language_recognisers/{instance_name}/get_labels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve operation.
-     * @callback module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ScoredLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of possible labels.
+     * Returns the classifier&#39;s list of possible class labels.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels = function(instanceName) {
+      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Recognise the language the text is written in.
      * Recognise the language the text is written in. Returns the list of scored language codes.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Lr4_language_recognisersApi~controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ScoredLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve = function(instanceName, textInput, callback) {
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -272,8 +283,22 @@
       return this.apiClient.callApi(
         '/lr4_language_recognisers/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Recognise the language the text is written in.
+     * Recognise the language the text is written in. Returns the list of scored language codes.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
+     */
+    this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve = function(instanceName, textInput) {
+      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

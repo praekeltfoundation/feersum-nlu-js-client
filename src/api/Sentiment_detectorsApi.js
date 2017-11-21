@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersSentimentDetectorsControllerSentimentDetectorRetrieve operation.
-     * @callback module:api/Sentiment_detectorsApi~controllersSentimentDetectorsControllerSentimentDetectorRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Sentiment} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Detect sentiment.
      * Detect the general sentiment in the input text.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Sentiment_detectorsApi~controllersSentimentDetectorsControllerSentimentDetectorRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Sentiment}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Sentiment} and HTTP response
      */
-    this.controllersSentimentDetectorsControllerSentimentDetectorRetrieve = function(instanceName, textInput, callback) {
+    this.controllersSentimentDetectorsControllerSentimentDetectorRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -96,8 +88,22 @@
       return this.apiClient.callApi(
         '/sentiment_detectors/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Detect sentiment.
+     * Detect the general sentiment in the input text.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Sentiment}
+     */
+    this.controllersSentimentDetectorsControllerSentimentDetectorRetrieve = function(instanceName, textInput) {
+      return this.controllersSentimentDetectorsControllerSentimentDetectorRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

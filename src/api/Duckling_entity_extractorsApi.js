@@ -48,22 +48,14 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate operation.
-     * @callback module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DucklingInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create a duckling entity extractor.
      * Create a new duckling entity extractor or load one from the store.
      * @param {module:model/DucklingEntCreateDetails} ducklingEntCreateDetails The details of the instance to create.
-     * @param {module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DucklingInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetail} and HTTP response
      */
-    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate = function(ducklingEntCreateDetails, callback) {
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateWithHttpInfo = function(ducklingEntCreateDetails) {
       var postBody = ducklingEntCreateDetails;
 
       // verify the required parameter 'ducklingEntCreateDetails' is set
@@ -89,26 +81,31 @@
       return this.apiClient.callApi(
         '/duckling_entity_extractors', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails operation.
-     * @callback module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DucklingInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a duckling entity extractor.
+     * Create a new duckling entity extractor or load one from the store.
+     * @param {module:model/DucklingEntCreateDetails} ducklingEntCreateDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetail}
      */
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate = function(ducklingEntCreateDetails) {
+      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateWithHttpInfo(ducklingEntCreateDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named duckling entity extractor instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DucklingInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetail} and HTTP response
      */
-    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails = function(instanceName, callback) {
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -135,25 +132,30 @@
       return this.apiClient.callApi(
         '/duckling_entity_extractors/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll operation.
-     * @callback module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DucklingInstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named duckling entity extractor instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetail}
      */
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails = function(instanceName) {
+      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded regular expression entity extractors.
      * Get the list of loaded duckling entity extractors.
-     * @param {module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DucklingInstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetailList} and HTTP response
      */
-    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll = function(callback) {
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -174,27 +176,31 @@
       return this.apiClient.callApi(
         '/duckling_entity_extractors', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve operation.
-     * @callback module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EntityList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded regular expression entity extractors.
+     * Get the list of loaded duckling entity extractors.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetailList}
      */
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll = function() {
+      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Extract information based on the regular expression.
      * Extract the entities parsed by duckling.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Duckling_entity_extractorsApi~controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EntityList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve = function(instanceName, textInput, callback) {
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -226,8 +232,22 @@
       return this.apiClient.callApi(
         '/duckling_entity_extractors/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Extract information based on the regular expression.
+     * Extract the entities parsed by duckling.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
+     */
+    this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve = function(instanceName, textInput) {
+      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

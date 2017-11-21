@@ -35,15 +35,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var newWordList = new FeersumNluApi.NewWordList(); // NewWordList | List of new words.
 
+apiInstance.controllersWordManifoldsControllerWordManifoldAddSimilarWords(instanceName, newWordList).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersWordManifoldsControllerWordManifoldAddSimilarWords(instanceName, newWordList, callback);
 ```
 
 ### Parameters
@@ -89,15 +86,12 @@ var apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
 var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
+apiInstance.controllersWordManifoldsControllerWordManifoldCreate(createDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersWordManifoldsControllerWordManifoldCreate(createDetails, callback);
 ```
 
 ### Parameters
@@ -144,15 +138,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var wordAndThreshold = new FeersumNluApi.WordAndThreshold(); // WordAndThreshold | A word token and an accompanying threshold.
 
+apiInstance.controllersWordManifoldsControllerWordManifoldGetSimilarWords(instanceName, wordAndThreshold).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersWordManifoldsControllerWordManifoldGetSimilarWords(instanceName, wordAndThreshold, callback);
 ```
 
 ### Parameters
@@ -200,15 +191,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersWordManifoldsControllerWordManifoldSpellCorrect(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersWordManifoldsControllerWordManifoldSpellCorrect(instanceName, textInput, callback);
 ```
 
 ### Parameters

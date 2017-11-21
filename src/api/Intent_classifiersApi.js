@@ -48,23 +48,15 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierAddTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TotalSamples} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add training samples.
      * Add training samples to named intent classifier. Returns the classifier&#39;s updated number of training samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierAddTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TotalSamples}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples = function(instanceName, labelledTextSampleList, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamplesWithHttpInfo = function(instanceName, labelledTextSampleList) {
       var postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
@@ -96,26 +88,32 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/training_samples', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierCreate operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add training samples.
+     * Add training samples to named intent classifier. Returns the classifier&#39;s updated number of training samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples = function(instanceName, labelledTextSampleList) {
+      return this.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create an intent classifier.
      * Create a new intent classifier or load one from the store. Returns the details of the new or loaded instance.
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierCreate = function(createDetails, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierCreateWithHttpInfo = function(createDetails) {
       var postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
@@ -141,27 +139,32 @@
       return this.apiClient.callApi(
         '/intent_classifiers', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierCurate operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierCurateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create an intent classifier.
+     * Create a new intent classifier or load one from the store. Returns the details of the new or loaded instance.
+     * @param {module:model/CreateDetails} createDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierCreate = function(createDetails) {
+      return this.controllersIntentClassifiersControllerIntentClassifierCreateWithHttpInfo(createDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Endpoint to aid in the curation of a model instance.
      * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierCurateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierCurate = function(instanceName, labelPair, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierCurateWithHttpInfo = function(instanceName, labelPair) {
       var postBody = labelPair;
 
       // verify the required parameter 'instanceName' is set
@@ -193,26 +196,32 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/curate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierDelTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Endpoint to aid in the curation of a model instance.
+     * Returns the list of samples behind a cell of the confusion matrix of the training or testing samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierCurate = function(instanceName, labelPair) {
+      return this.controllersIntentClassifiersControllerIntentClassifierCurateWithHttpInfo(instanceName, labelPair)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete training samples.
      * Delete the training samples of the named intent classifier. Returns the deleted samples.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierDelTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples = function(instanceName, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -239,26 +248,31 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/training_samples', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierGetDetails operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete training samples.
+     * Delete the training samples of the named intent classifier. Returns the deleted samples.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples = function(instanceName) {
+      return this.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Returns the details of the named intent classifier instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierGetDetails = function(instanceName, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -285,25 +299,30 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierGetDetailsAll operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Returns the details of the named intent classifier instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierGetDetails = function(instanceName) {
+      return this.controllersIntentClassifiersControllerIntentClassifierGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded intent classifiers.
      * Returns the list of loaded intent classifiers.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetailList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll = function(callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -324,26 +343,30 @@
       return this.apiClient.callApi(
         '/intent_classifiers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierGetLabels operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetLabelsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClassLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded intent classifiers.
+     * Returns the list of loaded intent classifiers.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetailList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll = function() {
+      return this.controllersIntentClassifiersControllerIntentClassifierGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of possible labels.
      * Returns the classifier&#39;s list of possible class labels.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetLabelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClassLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierGetLabels = function(instanceName, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierGetLabelsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -370,26 +393,31 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/get_labels', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LabelledTextSampleList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of possible labels.
+     * Returns the classifier&#39;s list of possible class labels.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierGetLabels = function(instanceName) {
+      return this.controllersIntentClassifiersControllerIntentClassifierGetLabelsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get training samples.
      * Returns the training samples of the named intent classifier.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierGetTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LabelledTextSampleList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples = function(instanceName, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamplesWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -416,27 +444,32 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/training_samples', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamplesCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TotalSamples} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get training samples.
+     * Returns the training samples of the named intent classifier.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples = function(instanceName) {
+      return this.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamplesWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Train/update the classifier online with the samples provided.
      * Train/update the classifier online with the samples provided. This operation is more efficient than a full re-train. Returns the classifier&#39;s updated number of training samples.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamplesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TotalSamples}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples = function(instanceName, labelledTextSampleList, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamplesWithHttpInfo = function(instanceName, labelledTextSampleList) {
       var postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
@@ -468,27 +501,33 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/online_training_samples', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierRetrieve operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ScoredLabelList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Train/update the classifier online with the samples provided.
+     * Train/update the classifier online with the samples provided. This operation is more efficient than a full re-train. Returns the classifier&#39;s updated number of training samples.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples = function(instanceName, labelledTextSampleList) {
+      return this.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Classify intent.
      * Classifies the intent and returns a probability sorted list of classes.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ScoredLabelList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierRetrieve = function(instanceName, textInput, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -520,27 +559,33 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersIntentClassifiersControllerIntentClassifierTrain operation.
-     * @callback module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierTrainCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Classify intent.
+     * Classifies the intent and returns a probability sorted list of classes.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
+    this.controllersIntentClassifiersControllerIntentClassifierRetrieve = function(instanceName, textInput) {
+      return this.controllersIntentClassifiersControllerIntentClassifierRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Train the named intent classifier.
      * Train the named intent classifier with the training and testing data already provided. Returns the updated instance details.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
-     * @param {module:api/Intent_classifiersApi~controllersIntentClassifiersControllerIntentClassifierTrainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    this.controllersIntentClassifiersControllerIntentClassifierTrain = function(instanceName, trainDetails, callback) {
+    this.controllersIntentClassifiersControllerIntentClassifierTrainWithHttpInfo = function(instanceName, trainDetails) {
       var postBody = trainDetails;
 
       // verify the required parameter 'instanceName' is set
@@ -572,8 +617,22 @@
       return this.apiClient.callApi(
         '/intent_classifiers/{instance_name}/train', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Train the named intent classifier.
+     * Train the named intent classifier with the training and testing data already provided. Returns the updated instance details.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
+     */
+    this.controllersIntentClassifiersControllerIntentClassifierTrain = function(instanceName, trainDetails) {
+      return this.controllersIntentClassifiersControllerIntentClassifierTrainWithHttpInfo(instanceName, trainDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

@@ -48,21 +48,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersDashboardControllerDashboardGetDetails operation.
-     * @callback module:api/DashboardApi~controllersDashboardControllerDashboardGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DashboardDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Your service dashboard.
      * Get your list of loaded model instances, the total API hits for each, API version, etc.
-     * @param {module:api/DashboardApi~controllersDashboardControllerDashboardGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DashboardDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardDetail} and HTTP response
      */
-    this.controllersDashboardControllerDashboardGetDetails = function(callback) {
+    this.controllersDashboardControllerDashboardGetDetailsWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -83,8 +75,20 @@
       return this.apiClient.callApi(
         '/dashboard', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Your service dashboard.
+     * Get your list of loaded model instances, the total API hits for each, API version, etc.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardDetail}
+     */
+    this.controllersDashboardControllerDashboardGetDetails = function() {
+      return this.controllersDashboardControllerDashboardGetDetailsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

@@ -48,22 +48,14 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate operation.
-     * @callback module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RegexInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create a regular expression entity extractor.
      * Create a new regular expression entity extractor or load one from the store.
      * @param {module:model/RegexEntCreateDetails} regexEntCreateDetails The details of the instance to create.
-     * @param {module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RegexInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetail} and HTTP response
      */
-    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate = function(regexEntCreateDetails, callback) {
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateWithHttpInfo = function(regexEntCreateDetails) {
       var postBody = regexEntCreateDetails;
 
       // verify the required parameter 'regexEntCreateDetails' is set
@@ -89,26 +81,31 @@
       return this.apiClient.callApi(
         '/regex_entity_extractors', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails operation.
-     * @callback module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RegexInstanceDetail} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a regular expression entity extractor.
+     * Create a new regular expression entity extractor or load one from the store.
+     * @param {module:model/RegexEntCreateDetails} regexEntCreateDetails The details of the instance to create.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetail}
      */
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate = function(regexEntCreateDetails) {
+      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateWithHttpInfo(regexEntCreateDetails)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get details of named instance.
      * Get the details of the named regular expression entity extractor instance.
      * @param {String} instanceName The name of the model instance.
-     * @param {module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RegexInstanceDetail}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetail} and HTTP response
      */
-    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails = function(instanceName, callback) {
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsWithHttpInfo = function(instanceName) {
       var postBody = null;
 
       // verify the required parameter 'instanceName' is set
@@ -135,25 +132,30 @@
       return this.apiClient.callApi(
         '/regex_entity_extractors/{instance_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll operation.
-     * @callback module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RegexInstanceDetailList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get details of named instance.
+     * Get the details of the named regular expression entity extractor instance.
+     * @param {String} instanceName The name of the model instance.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetail}
      */
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails = function(instanceName) {
+      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsWithHttpInfo(instanceName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get list of loaded regular expression entity extractors.
      * Get the list of loaded regular expression entity extractors.
-     * @param {module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RegexInstanceDetailList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetailList} and HTTP response
      */
-    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll = function(callback) {
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllWithHttpInfo = function() {
       var postBody = null;
 
 
@@ -174,27 +176,31 @@
       return this.apiClient.callApi(
         '/regex_entity_extractors', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
     /**
-     * Callback function to receive the result of the controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve operation.
-     * @callback module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EntityList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get list of loaded regular expression entity extractors.
+     * Get the list of loaded regular expression entity extractors.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetailList}
      */
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll = function() {
+      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Extract information based on the regular expression.
      * Extract the entities matching the regular expression.
      * @param {String} instanceName The name of the model instance.
      * @param {module:model/TextInput} textInput The input text.
-     * @param {module:api/Regex_entity_extractorsApi~controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EntityList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve = function(instanceName, textInput, callback) {
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveWithHttpInfo = function(instanceName, textInput) {
       var postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
@@ -226,8 +232,22 @@
       return this.apiClient.callApi(
         '/regex_entity_extractors/{instance_name}/retrieve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
+    }
+
+    /**
+     * Extract information based on the regular expression.
+     * Extract the entities matching the regular expression.
+     * @param {String} instanceName The name of the model instance.
+     * @param {module:model/TextInput} textInput The input text.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
+     */
+    this.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve = function(instanceName, textInput) {
+      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
   };
 

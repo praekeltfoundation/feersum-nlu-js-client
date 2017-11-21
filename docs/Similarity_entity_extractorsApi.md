@@ -33,15 +33,12 @@ var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
 var similarityEntCreateDetails = new FeersumNluApi.SimilarityEntCreateDetails(); // SimilarityEntCreateDetails | The details of the instance to create.
 
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails, callback);
 ```
 
 ### Parameters
@@ -86,15 +83,12 @@ var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
 var instanceName = "instanceName_example"; // String | The name of the model instance.
 
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName, callback);
 ```
 
 ### Parameters
@@ -136,15 +130,12 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll(callback);
 ```
 
 ### Parameters
@@ -188,15 +179,12 @@ var instanceName = "instanceName_example"; // String | The name of the model ins
 
 var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput, callback);
 ```
 
 ### Parameters
