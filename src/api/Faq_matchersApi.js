@@ -51,17 +51,17 @@ export default class Faq_matchersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
+    faqMatcherAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
       let postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherAddTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherAddTrainingSamples");
       }
 
       // verify the required parameter 'labelledTextSampleList' is set
       if (labelledTextSampleList === undefined || labelledTextSampleList === null) {
-        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling controllersFaqMatchersControllerFaqMatcherAddTrainingSamples");
+        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling faqMatcherAddTrainingSamples");
       }
 
 
@@ -94,8 +94,8 @@ export default class Faq_matchersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
-    controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList) {
-      return this.controllersFaqMatchersControllerFaqMatcherAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+    faqMatcherAddTrainingSamples(instanceName, labelledTextSampleList) {
+      return this.faqMatcherAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -108,12 +108,12 @@ export default class Faq_matchersApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherCreateWithHttpInfo(createDetails) {
+    faqMatcherCreateWithHttpInfo(createDetails) {
       let postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
       if (createDetails === undefined || createDetails === null) {
-        throw new Error("Missing the required parameter 'createDetails' when calling controllersFaqMatchersControllerFaqMatcherCreate");
+        throw new Error("Missing the required parameter 'createDetails' when calling faqMatcherCreate");
       }
 
 
@@ -144,8 +144,8 @@ export default class Faq_matchersApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersFaqMatchersControllerFaqMatcherCreate(createDetails) {
-      return this.controllersFaqMatchersControllerFaqMatcherCreateWithHttpInfo(createDetails)
+    faqMatcherCreate(createDetails) {
+      return this.faqMatcherCreateWithHttpInfo(createDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -159,17 +159,17 @@ export default class Faq_matchersApi {
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherCurateWithHttpInfo(instanceName, labelPair) {
+    faqMatcherCurateWithHttpInfo(instanceName, labelPair) {
       let postBody = labelPair;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherCurate");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherCurate");
       }
 
       // verify the required parameter 'labelPair' is set
       if (labelPair === undefined || labelPair === null) {
-        throw new Error("Missing the required parameter 'labelPair' when calling controllersFaqMatchersControllerFaqMatcherCurate");
+        throw new Error("Missing the required parameter 'labelPair' when calling faqMatcherCurate");
       }
 
 
@@ -202,8 +202,8 @@ export default class Faq_matchersApi {
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair) {
-      return this.controllersFaqMatchersControllerFaqMatcherCurateWithHttpInfo(instanceName, labelPair)
+    faqMatcherCurate(instanceName, labelPair) {
+      return this.faqMatcherCurateWithHttpInfo(instanceName, labelPair)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -216,12 +216,12 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesWithHttpInfo(instanceName) {
+    faqMatcherDelTrainingSamplesWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherDelTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherDelTrainingSamples");
       }
 
 
@@ -253,8 +253,8 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName) {
-      return this.controllersFaqMatchersControllerFaqMatcherDelTrainingSamplesWithHttpInfo(instanceName)
+    faqMatcherDelTrainingSamples(instanceName) {
+      return this.faqMatcherDelTrainingSamplesWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -267,12 +267,12 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherGetDetailsWithHttpInfo(instanceName) {
+    faqMatcherGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherGetDetails");
       }
 
 
@@ -304,8 +304,8 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName) {
-      return this.controllersFaqMatchersControllerFaqMatcherGetDetailsWithHttpInfo(instanceName)
+    faqMatcherGetDetails(instanceName) {
+      return this.faqMatcherGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -317,7 +317,7 @@ export default class Faq_matchersApi {
      * Returns the list of loaded faq matchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetailList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherGetDetailsAllWithHttpInfo() {
+    faqMatcherGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -347,8 +347,8 @@ export default class Faq_matchersApi {
      * Returns the list of loaded faq matchers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetailList}
      */
-    controllersFaqMatchersControllerFaqMatcherGetDetailsAll() {
-      return this.controllersFaqMatchersControllerFaqMatcherGetDetailsAllWithHttpInfo()
+    faqMatcherGetDetailsAll() {
+      return this.faqMatcherGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -361,12 +361,12 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherGetLabelsWithHttpInfo(instanceName) {
+    faqMatcherGetLabelsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherGetLabels");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherGetLabels");
       }
 
 
@@ -398,8 +398,8 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
-    controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName) {
-      return this.controllersFaqMatchersControllerFaqMatcherGetLabelsWithHttpInfo(instanceName)
+    faqMatcherGetLabels(instanceName) {
+      return this.faqMatcherGetLabelsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -412,12 +412,12 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesWithHttpInfo(instanceName) {
+    faqMatcherGetTrainingSamplesWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherGetTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherGetTrainingSamples");
       }
 
 
@@ -449,8 +449,8 @@ export default class Faq_matchersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName) {
-      return this.controllersFaqMatchersControllerFaqMatcherGetTrainingSamplesWithHttpInfo(instanceName)
+    faqMatcherGetTrainingSamples(instanceName) {
+      return this.faqMatcherGetTrainingSamplesWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -464,17 +464,17 @@ export default class Faq_matchersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
+    faqMatcherOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
       let postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherOnlineTrainingSamples");
       }
 
       // verify the required parameter 'labelledTextSampleList' is set
       if (labelledTextSampleList === undefined || labelledTextSampleList === null) {
-        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples");
+        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling faqMatcherOnlineTrainingSamples");
       }
 
 
@@ -507,8 +507,8 @@ export default class Faq_matchersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
-    controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList) {
-      return this.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+    faqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList) {
+      return this.faqMatcherOnlineTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -522,17 +522,17 @@ export default class Faq_matchersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherRetrieveWithHttpInfo(instanceName, textInput) {
+    faqMatcherRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersFaqMatchersControllerFaqMatcherRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling faqMatcherRetrieve");
       }
 
 
@@ -565,8 +565,8 @@ export default class Faq_matchersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
-    controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput) {
-      return this.controllersFaqMatchersControllerFaqMatcherRetrieveWithHttpInfo(instanceName, textInput)
+    faqMatcherRetrieve(instanceName, textInput) {
+      return this.faqMatcherRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -580,17 +580,17 @@ export default class Faq_matchersApi {
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersFaqMatchersControllerFaqMatcherTrainWithHttpInfo(instanceName, trainDetails) {
+    faqMatcherTrainWithHttpInfo(instanceName, trainDetails) {
       let postBody = trainDetails;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersFaqMatchersControllerFaqMatcherTrain");
+        throw new Error("Missing the required parameter 'instanceName' when calling faqMatcherTrain");
       }
 
       // verify the required parameter 'trainDetails' is set
       if (trainDetails === undefined || trainDetails === null) {
-        throw new Error("Missing the required parameter 'trainDetails' when calling controllersFaqMatchersControllerFaqMatcherTrain");
+        throw new Error("Missing the required parameter 'trainDetails' when calling faqMatcherTrain");
       }
 
 
@@ -623,8 +623,8 @@ export default class Faq_matchersApi {
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails) {
-      return this.controllersFaqMatchersControllerFaqMatcherTrainWithHttpInfo(instanceName, trainDetails)
+    faqMatcherTrain(instanceName, trainDetails) {
+      return this.faqMatcherTrainWithHttpInfo(instanceName, trainDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

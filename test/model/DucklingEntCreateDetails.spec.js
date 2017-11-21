@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(FeersumNluApi.DucklingEntCreateDetails);
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new FeersumNluApi.DucklingEntCreateDetails();
+      //expect(instance).to.be();
+    });
+
     it('should have the property desc (base name: "desc")', function() {
       // uncomment below and update the code to test the property desc
       //var instane = new FeersumNluApi.DucklingEntCreateDetails();
@@ -62,12 +68,6 @@
 
     it('should have the property loadFromStore (base name: "load_from_store")', function() {
       // uncomment below and update the code to test the property loadFromStore
-      //var instane = new FeersumNluApi.DucklingEntCreateDetails();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
       //var instane = new FeersumNluApi.DucklingEntCreateDetails();
       //expect(instance).to.be();
     });

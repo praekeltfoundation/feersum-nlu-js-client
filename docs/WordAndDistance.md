@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**distance** | **Number** |  | 
 **word** | **String** |  | 
+**distance** | **Number** |  | 
 
 

@@ -43,17 +43,17 @@ export default class Sentiment_detectorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Sentiment} and HTTP response
      */
-    controllersSentimentDetectorsControllerSentimentDetectorRetrieveWithHttpInfo(instanceName, textInput) {
+    sentimentDetectorRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersSentimentDetectorsControllerSentimentDetectorRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling sentimentDetectorRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersSentimentDetectorsControllerSentimentDetectorRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling sentimentDetectorRetrieve");
       }
 
 
@@ -86,8 +86,8 @@ export default class Sentiment_detectorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Sentiment}
      */
-    controllersSentimentDetectorsControllerSentimentDetectorRetrieve(instanceName, textInput) {
-      return this.controllersSentimentDetectorsControllerSentimentDetectorRetrieveWithHttpInfo(instanceName, textInput)
+    sentimentDetectorRetrieve(instanceName, textInput) {
+      return this.sentimentDetectorRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

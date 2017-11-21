@@ -4,21 +4,21 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersTextClassifiersControllerTextClassifierAddTrainingSamples**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierAddTrainingSamples) | **POST** /text_classifiers/{instance_name}/training_samples | Add training samples.
-[**controllersTextClassifiersControllerTextClassifierCreate**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierCreate) | **POST** /text_classifiers | Create a text classifier.
-[**controllersTextClassifiersControllerTextClassifierCurate**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierCurate) | **POST** /text_classifiers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
-[**controllersTextClassifiersControllerTextClassifierDelTrainingSamples**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierDelTrainingSamples) | **DELETE** /text_classifiers/{instance_name}/training_samples | Delete training samples.
-[**controllersTextClassifiersControllerTextClassifierGetDetails**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierGetDetails) | **GET** /text_classifiers/{instance_name} | Get details of named instance.
-[**controllersTextClassifiersControllerTextClassifierGetDetailsAll**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierGetDetailsAll) | **GET** /text_classifiers | Get list of loaded text classifiers.
-[**controllersTextClassifiersControllerTextClassifierGetLabels**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierGetLabels) | **GET** /text_classifiers/{instance_name}/get_labels | Get list of possible labels.
-[**controllersTextClassifiersControllerTextClassifierGetTrainingSamples**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierGetTrainingSamples) | **GET** /text_classifiers/{instance_name}/training_samples | Get training samples.
-[**controllersTextClassifiersControllerTextClassifierRetrieve**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierRetrieve) | **POST** /text_classifiers/{instance_name}/retrieve | Classify text.
-[**controllersTextClassifiersControllerTextClassifierTrain**](Text_classifiersApi.md#controllersTextClassifiersControllerTextClassifierTrain) | **POST** /text_classifiers/{instance_name}/train | Train the named text classifier.
+[**textClassifierAddTrainingSamples**](Text_classifiersApi.md#textClassifierAddTrainingSamples) | **POST** /text_classifiers/{instance_name}/training_samples | Add training samples.
+[**textClassifierCreate**](Text_classifiersApi.md#textClassifierCreate) | **POST** /text_classifiers | Create a text classifier.
+[**textClassifierCurate**](Text_classifiersApi.md#textClassifierCurate) | **POST** /text_classifiers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
+[**textClassifierDelTrainingSamples**](Text_classifiersApi.md#textClassifierDelTrainingSamples) | **DELETE** /text_classifiers/{instance_name}/training_samples | Delete training samples.
+[**textClassifierGetDetails**](Text_classifiersApi.md#textClassifierGetDetails) | **GET** /text_classifiers/{instance_name} | Get details of named instance.
+[**textClassifierGetDetailsAll**](Text_classifiersApi.md#textClassifierGetDetailsAll) | **GET** /text_classifiers | Get list of loaded text classifiers.
+[**textClassifierGetLabels**](Text_classifiersApi.md#textClassifierGetLabels) | **GET** /text_classifiers/{instance_name}/get_labels | Get list of possible labels.
+[**textClassifierGetTrainingSamples**](Text_classifiersApi.md#textClassifierGetTrainingSamples) | **GET** /text_classifiers/{instance_name}/training_samples | Get training samples.
+[**textClassifierRetrieve**](Text_classifiersApi.md#textClassifierRetrieve) | **POST** /text_classifiers/{instance_name}/retrieve | Classify text.
+[**textClassifierTrain**](Text_classifiersApi.md#textClassifierTrain) | **POST** /text_classifiers/{instance_name}/train | Train the named text classifier.
 
 
-<a name="controllersTextClassifiersControllerTextClassifierAddTrainingSamples"></a>
-# **controllersTextClassifiersControllerTextClassifierAddTrainingSamples**
-> TotalSamples controllersTextClassifiersControllerTextClassifierAddTrainingSamples(instanceName, labelledTextSampleList)
+<a name="textClassifierAddTrainingSamples"></a>
+# **textClassifierAddTrainingSamples**
+> TotalSamples textClassifierAddTrainingSamples(instanceName, labelledTextSampleList)
 
 Add training samples.
 
@@ -41,7 +41,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.textClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -69,9 +69,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierCreate"></a>
-# **controllersTextClassifiersControllerTextClassifierCreate**
-> InstanceDetail controllersTextClassifiersControllerTextClassifierCreate(createDetails)
+<a name="textClassifierCreate"></a>
+# **textClassifierCreate**
+> InstanceDetail textClassifierCreate(createDetails)
 
 Create a text classifier.
 
@@ -92,7 +92,7 @@ let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
 let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierCreate(createDetails).then((data) => {
+apiInstance.textClassifierCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -119,9 +119,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierCurate"></a>
-# **controllersTextClassifiersControllerTextClassifierCurate**
-> LabelledTextSampleList controllersTextClassifiersControllerTextClassifierCurate(instanceName, labelPair)
+<a name="textClassifierCurate"></a>
+# **textClassifierCurate**
+> LabelledTextSampleList textClassifierCurate(instanceName, labelPair)
 
 Endpoint to aid in the curation of a model instance.
 
@@ -144,7 +144,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierCurate(instanceName, labelPair).then((data) => {
+apiInstance.textClassifierCurate(instanceName, labelPair).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -172,9 +172,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierDelTrainingSamples"></a>
-# **controllersTextClassifiersControllerTextClassifierDelTrainingSamples**
-> LabelledTextSampleList controllersTextClassifiersControllerTextClassifierDelTrainingSamples(instanceName)
+<a name="textClassifierDelTrainingSamples"></a>
+# **textClassifierDelTrainingSamples**
+> LabelledTextSampleList textClassifierDelTrainingSamples(instanceName)
 
 Delete training samples.
 
@@ -195,7 +195,7 @@ let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierDelTrainingSamples(instanceName).then((data) => {
+apiInstance.textClassifierDelTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -222,9 +222,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierGetDetails"></a>
-# **controllersTextClassifiersControllerTextClassifierGetDetails**
-> InstanceDetail controllersTextClassifiersControllerTextClassifierGetDetails(instanceName)
+<a name="textClassifierGetDetails"></a>
+# **textClassifierGetDetails**
+> InstanceDetail textClassifierGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -245,7 +245,7 @@ let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetDetails(instanceName).then((data) => {
+apiInstance.textClassifierGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -272,9 +272,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierGetDetailsAll"></a>
-# **controllersTextClassifiersControllerTextClassifierGetDetailsAll**
-> InstanceDetailList controllersTextClassifiersControllerTextClassifierGetDetailsAll()
+<a name="textClassifierGetDetailsAll"></a>
+# **textClassifierGetDetailsAll**
+> InstanceDetailList textClassifierGetDetailsAll()
 
 Get list of loaded text classifiers.
 
@@ -292,7 +292,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Text_classifiersApi();
-apiInstance.controllersTextClassifiersControllerTextClassifierGetDetailsAll().then((data) => {
+apiInstance.textClassifierGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -316,9 +316,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierGetLabels"></a>
-# **controllersTextClassifiersControllerTextClassifierGetLabels**
-> ClassLabelList controllersTextClassifiersControllerTextClassifierGetLabels(instanceName)
+<a name="textClassifierGetLabels"></a>
+# **textClassifierGetLabels**
+> ClassLabelList textClassifierGetLabels(instanceName)
 
 Get list of possible labels.
 
@@ -339,7 +339,7 @@ let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetLabels(instanceName).then((data) => {
+apiInstance.textClassifierGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -366,9 +366,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierGetTrainingSamples"></a>
-# **controllersTextClassifiersControllerTextClassifierGetTrainingSamples**
-> LabelledTextSampleList controllersTextClassifiersControllerTextClassifierGetTrainingSamples(instanceName)
+<a name="textClassifierGetTrainingSamples"></a>
+# **textClassifierGetTrainingSamples**
+> LabelledTextSampleList textClassifierGetTrainingSamples(instanceName)
 
 Get training samples.
 
@@ -389,7 +389,7 @@ let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetTrainingSamples(instanceName).then((data) => {
+apiInstance.textClassifierGetTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -416,9 +416,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierRetrieve"></a>
-# **controllersTextClassifiersControllerTextClassifierRetrieve**
-> ScoredLabelList controllersTextClassifiersControllerTextClassifierRetrieve(instanceName, textInput)
+<a name="textClassifierRetrieve"></a>
+# **textClassifierRetrieve**
+> ScoredLabelList textClassifierRetrieve(instanceName, textInput)
 
 Classify text.
 
@@ -441,7 +441,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierRetrieve(instanceName, textInput).then((data) => {
+apiInstance.textClassifierRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -469,9 +469,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersTextClassifiersControllerTextClassifierTrain"></a>
-# **controllersTextClassifiersControllerTextClassifierTrain**
-> InstanceDetail controllersTextClassifiersControllerTextClassifierTrain(instanceName, trainDetails)
+<a name="textClassifierTrain"></a>
+# **textClassifierTrain**
+> InstanceDetail textClassifierTrain(instanceName, trainDetails)
 
 Train the named text classifier.
 
@@ -494,7 +494,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierTrain(instanceName, trainDetails).then((data) => {
+apiInstance.textClassifierTrain(instanceName, trainDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

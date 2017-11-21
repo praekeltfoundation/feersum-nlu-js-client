@@ -4,12 +4,12 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersDateParsersControllerDateParserRetrieve**](Date_parsersApi.md#controllersDateParsersControllerDateParserRetrieve) | **POST** /date_parsers/{instance_name}/retrieve | Extract dates.
+[**dateParserRetrieve**](Date_parsersApi.md#dateParserRetrieve) | **POST** /date_parsers/{instance_name}/retrieve | Extract dates.
 
 
-<a name="controllersDateParsersControllerDateParserRetrieve"></a>
-# **controllersDateParsersControllerDateParserRetrieve**
-> DateList controllersDateParsersControllerDateParserRetrieve(instanceName, textInput)
+<a name="dateParserRetrieve"></a>
+# **dateParserRetrieve**
+> DateList dateParserRetrieve(instanceName, textInput)
 
 Extract dates.
 
@@ -32,7 +32,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersDateParsersControllerDateParserRetrieve(instanceName, textInput).then((data) => {
+apiInstance.dateParserRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

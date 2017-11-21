@@ -60,8 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property modelList (base name: "model_list")', function() {
-      // uncomment below and update the code to test the property modelList
+    it('should have the property serviceName (base name: "service_name")', function() {
+      // uncomment below and update the code to test the property serviceName
       //var instane = new FeersumNluApi.DashboardDetail();
       //expect(instance).to.be();
     });
@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property serviceName (base name: "service_name")', function() {
-      // uncomment below and update the code to test the property serviceName
+    it('should have the property modelList (base name: "model_list")', function() {
+      // uncomment below and update the code to test the property modelList
       //var instane = new FeersumNluApi.DashboardDetail();
       //expect(instance).to.be();
     });

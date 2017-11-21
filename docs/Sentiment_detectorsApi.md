@@ -4,12 +4,12 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersSentimentDetectorsControllerSentimentDetectorRetrieve**](Sentiment_detectorsApi.md#controllersSentimentDetectorsControllerSentimentDetectorRetrieve) | **POST** /sentiment_detectors/{instance_name}/retrieve | Detect sentiment.
+[**sentimentDetectorRetrieve**](Sentiment_detectorsApi.md#sentimentDetectorRetrieve) | **POST** /sentiment_detectors/{instance_name}/retrieve | Detect sentiment.
 
 
-<a name="controllersSentimentDetectorsControllerSentimentDetectorRetrieve"></a>
-# **controllersSentimentDetectorsControllerSentimentDetectorRetrieve**
-> Sentiment controllersSentimentDetectorsControllerSentimentDetectorRetrieve(instanceName, textInput)
+<a name="sentimentDetectorRetrieve"></a>
+# **sentimentDetectorRetrieve**
+> Sentiment sentimentDetectorRetrieve(instanceName, textInput)
 
 Detect sentiment.
 
@@ -32,7 +32,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersSentimentDetectorsControllerSentimentDetectorRetrieve(instanceName, textInput).then((data) => {
+apiInstance.sentimentDetectorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

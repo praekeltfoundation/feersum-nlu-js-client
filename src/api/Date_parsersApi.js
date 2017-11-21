@@ -43,17 +43,17 @@ export default class Date_parsersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DateList} and HTTP response
      */
-    controllersDateParsersControllerDateParserRetrieveWithHttpInfo(instanceName, textInput) {
+    dateParserRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersDateParsersControllerDateParserRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling dateParserRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersDateParsersControllerDateParserRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling dateParserRetrieve");
       }
 
 
@@ -86,8 +86,8 @@ export default class Date_parsersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DateList}
      */
-    controllersDateParsersControllerDateParserRetrieve(instanceName, textInput) {
-      return this.controllersDateParsersControllerDateParserRetrieveWithHttpInfo(instanceName, textInput)
+    dateParserRetrieve(instanceName, textInput) {
+      return this.dateParserRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

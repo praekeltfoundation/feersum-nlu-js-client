@@ -4,15 +4,15 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate**](Similarity_entity_extractorsApi.md#controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate) | **POST** /similarity_entity_extractors | Create a word similarity entity extractor.
-[**controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails**](Similarity_entity_extractorsApi.md#controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails) | **GET** /similarity_entity_extractors/{instance_name} | Get details of named instance.
-[**controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll**](Similarity_entity_extractorsApi.md#controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll) | **GET** /similarity_entity_extractors | Get list of loaded similarity entity extractors.
-[**controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve**](Similarity_entity_extractorsApi.md#controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve) | **POST** /similarity_entity_extractors/{instance_name}/retrieve | Extract information based on word similarity.
+[**similarityEntityExtractorCreate**](Similarity_entity_extractorsApi.md#similarityEntityExtractorCreate) | **POST** /similarity_entity_extractors | Create a word similarity entity extractor.
+[**similarityEntityExtractorGetDetails**](Similarity_entity_extractorsApi.md#similarityEntityExtractorGetDetails) | **GET** /similarity_entity_extractors/{instance_name} | Get details of named instance.
+[**similarityEntityExtractorGetDetailsAll**](Similarity_entity_extractorsApi.md#similarityEntityExtractorGetDetailsAll) | **GET** /similarity_entity_extractors | Get list of loaded similarity entity extractors.
+[**similarityEntityExtractorRetrieve**](Similarity_entity_extractorsApi.md#similarityEntityExtractorRetrieve) | **POST** /similarity_entity_extractors/{instance_name}/retrieve | Extract information based on word similarity.
 
 
-<a name="controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate"></a>
-# **controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate**
-> SimilarityInstanceDetail controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails)
+<a name="similarityEntityExtractorCreate"></a>
+# **similarityEntityExtractorCreate**
+> SimilarityInstanceDetail similarityEntityExtractorCreate(similarityEntCreateDetails)
 
 Create a word similarity entity extractor.
 
@@ -33,7 +33,7 @@ let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
 let similarityEntCreateDetails = new FeersumNluApi.SimilarityEntCreateDetails(); // SimilarityEntCreateDetails | The details of the instance to create.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails).then((data) => {
+apiInstance.similarityEntityExtractorCreate(similarityEntCreateDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails"></a>
-# **controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails**
-> SimilarityInstanceDetail controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName)
+<a name="similarityEntityExtractorGetDetails"></a>
+# **similarityEntityExtractorGetDetails**
+> SimilarityInstanceDetail similarityEntityExtractorGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -83,7 +83,7 @@ let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName).then((data) => {
+apiInstance.similarityEntityExtractorGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -110,9 +110,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll"></a>
-# **controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll**
-> SimilarityInstanceDetailList controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll()
+<a name="similarityEntityExtractorGetDetailsAll"></a>
+# **similarityEntityExtractorGetDetailsAll**
+> SimilarityInstanceDetailList similarityEntityExtractorGetDetailsAll()
 
 Get list of loaded similarity entity extractors.
 
@@ -130,7 +130,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll().then((data) => {
+apiInstance.similarityEntityExtractorGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -154,9 +154,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve"></a>
-# **controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve**
-> EntityList controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput)
+<a name="similarityEntityExtractorRetrieve"></a>
+# **similarityEntityExtractorRetrieve**
+> EntityList similarityEntityExtractorRetrieve(instanceName, textInput)
 
 Extract information based on word similarity.
 
@@ -179,7 +179,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput).then((data) => {
+apiInstance.similarityEntityExtractorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

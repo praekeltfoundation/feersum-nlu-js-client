@@ -51,17 +51,17 @@ export default class Text_classifiersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TotalSamples} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
+    textClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList) {
       let postBody = labelledTextSampleList;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierAddTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierAddTrainingSamples");
       }
 
       // verify the required parameter 'labelledTextSampleList' is set
       if (labelledTextSampleList === undefined || labelledTextSampleList === null) {
-        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling controllersTextClassifiersControllerTextClassifierAddTrainingSamples");
+        throw new Error("Missing the required parameter 'labelledTextSampleList' when calling textClassifierAddTrainingSamples");
       }
 
 
@@ -94,8 +94,8 @@ export default class Text_classifiersApi {
      * @param {module:model/LabelledTextSampleList} labelledTextSampleList List of labelled text samples.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TotalSamples}
      */
-    controllersTextClassifiersControllerTextClassifierAddTrainingSamples(instanceName, labelledTextSampleList) {
-      return this.controllersTextClassifiersControllerTextClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
+    textClassifierAddTrainingSamples(instanceName, labelledTextSampleList) {
+      return this.textClassifierAddTrainingSamplesWithHttpInfo(instanceName, labelledTextSampleList)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -108,12 +108,12 @@ export default class Text_classifiersApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierCreateWithHttpInfo(createDetails) {
+    textClassifierCreateWithHttpInfo(createDetails) {
       let postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
       if (createDetails === undefined || createDetails === null) {
-        throw new Error("Missing the required parameter 'createDetails' when calling controllersTextClassifiersControllerTextClassifierCreate");
+        throw new Error("Missing the required parameter 'createDetails' when calling textClassifierCreate");
       }
 
 
@@ -144,8 +144,8 @@ export default class Text_classifiersApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersTextClassifiersControllerTextClassifierCreate(createDetails) {
-      return this.controllersTextClassifiersControllerTextClassifierCreateWithHttpInfo(createDetails)
+    textClassifierCreate(createDetails) {
+      return this.textClassifierCreateWithHttpInfo(createDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -159,17 +159,17 @@ export default class Text_classifiersApi {
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierCurateWithHttpInfo(instanceName, labelPair) {
+    textClassifierCurateWithHttpInfo(instanceName, labelPair) {
       let postBody = labelPair;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierCurate");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierCurate");
       }
 
       // verify the required parameter 'labelPair' is set
       if (labelPair === undefined || labelPair === null) {
-        throw new Error("Missing the required parameter 'labelPair' when calling controllersTextClassifiersControllerTextClassifierCurate");
+        throw new Error("Missing the required parameter 'labelPair' when calling textClassifierCurate");
       }
 
 
@@ -202,8 +202,8 @@ export default class Text_classifiersApi {
      * @param {module:model/ClassLabelPair} labelPair The true label, predicted label and matrix (train/test) to use.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersTextClassifiersControllerTextClassifierCurate(instanceName, labelPair) {
-      return this.controllersTextClassifiersControllerTextClassifierCurateWithHttpInfo(instanceName, labelPair)
+    textClassifierCurate(instanceName, labelPair) {
+      return this.textClassifierCurateWithHttpInfo(instanceName, labelPair)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -216,12 +216,12 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierDelTrainingSamplesWithHttpInfo(instanceName) {
+    textClassifierDelTrainingSamplesWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierDelTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierDelTrainingSamples");
       }
 
 
@@ -253,8 +253,8 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersTextClassifiersControllerTextClassifierDelTrainingSamples(instanceName) {
-      return this.controllersTextClassifiersControllerTextClassifierDelTrainingSamplesWithHttpInfo(instanceName)
+    textClassifierDelTrainingSamples(instanceName) {
+      return this.textClassifierDelTrainingSamplesWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -267,12 +267,12 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierGetDetailsWithHttpInfo(instanceName) {
+    textClassifierGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierGetDetails");
       }
 
 
@@ -304,8 +304,8 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersTextClassifiersControllerTextClassifierGetDetails(instanceName) {
-      return this.controllersTextClassifiersControllerTextClassifierGetDetailsWithHttpInfo(instanceName)
+    textClassifierGetDetails(instanceName) {
+      return this.textClassifierGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -317,7 +317,7 @@ export default class Text_classifiersApi {
      * Get the list of loaded text classifiers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetailList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierGetDetailsAllWithHttpInfo() {
+    textClassifierGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -347,8 +347,8 @@ export default class Text_classifiersApi {
      * Get the list of loaded text classifiers.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetailList}
      */
-    controllersTextClassifiersControllerTextClassifierGetDetailsAll() {
-      return this.controllersTextClassifiersControllerTextClassifierGetDetailsAllWithHttpInfo()
+    textClassifierGetDetailsAll() {
+      return this.textClassifierGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -361,12 +361,12 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierGetLabelsWithHttpInfo(instanceName) {
+    textClassifierGetLabelsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierGetLabels");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierGetLabels");
       }
 
 
@@ -398,8 +398,8 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
-    controllersTextClassifiersControllerTextClassifierGetLabels(instanceName) {
-      return this.controllersTextClassifiersControllerTextClassifierGetLabelsWithHttpInfo(instanceName)
+    textClassifierGetLabels(instanceName) {
+      return this.textClassifierGetLabelsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -412,12 +412,12 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LabelledTextSampleList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierGetTrainingSamplesWithHttpInfo(instanceName) {
+    textClassifierGetTrainingSamplesWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierGetTrainingSamples");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierGetTrainingSamples");
       }
 
 
@@ -449,8 +449,8 @@ export default class Text_classifiersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LabelledTextSampleList}
      */
-    controllersTextClassifiersControllerTextClassifierGetTrainingSamples(instanceName) {
-      return this.controllersTextClassifiersControllerTextClassifierGetTrainingSamplesWithHttpInfo(instanceName)
+    textClassifierGetTrainingSamples(instanceName) {
+      return this.textClassifierGetTrainingSamplesWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -464,17 +464,17 @@ export default class Text_classifiersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierRetrieveWithHttpInfo(instanceName, textInput) {
+    textClassifierRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersTextClassifiersControllerTextClassifierRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling textClassifierRetrieve");
       }
 
 
@@ -507,8 +507,8 @@ export default class Text_classifiersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
-    controllersTextClassifiersControllerTextClassifierRetrieve(instanceName, textInput) {
-      return this.controllersTextClassifiersControllerTextClassifierRetrieveWithHttpInfo(instanceName, textInput)
+    textClassifierRetrieve(instanceName, textInput) {
+      return this.textClassifierRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -522,17 +522,17 @@ export default class Text_classifiersApi {
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersTextClassifiersControllerTextClassifierTrainWithHttpInfo(instanceName, trainDetails) {
+    textClassifierTrainWithHttpInfo(instanceName, trainDetails) {
       let postBody = trainDetails;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersTextClassifiersControllerTextClassifierTrain");
+        throw new Error("Missing the required parameter 'instanceName' when calling textClassifierTrain");
       }
 
       // verify the required parameter 'trainDetails' is set
       if (trainDetails === undefined || trainDetails === null) {
-        throw new Error("Missing the required parameter 'trainDetails' when calling controllersTextClassifiersControllerTextClassifierTrain");
+        throw new Error("Missing the required parameter 'trainDetails' when calling textClassifierTrain");
       }
 
 
@@ -565,8 +565,8 @@ export default class Text_classifiersApi {
      * @param {module:model/TrainDetails} trainDetails The arguments provided to the train operation.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersTextClassifiersControllerTextClassifierTrain(instanceName, trainDetails) {
-      return this.controllersTextClassifiersControllerTextClassifierTrainWithHttpInfo(instanceName, trainDetails)
+    textClassifierTrain(instanceName, trainDetails) {
+      return this.textClassifierTrainWithHttpInfo(instanceName, trainDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

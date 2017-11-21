@@ -29,18 +29,18 @@ export default class ClassLabelPair {
     * The ground truth label, predicted label and matrix (train/test) to use.
     * @alias module:model/ClassLabelPair
     * @class
-    * @param matrixName {String} The confusion matrix to use. Should be either 'train' or 'test' which refers to the confusion matrix of the training data or the testing data respectively.
-    * @param predictedLabel {String} 
     * @param trueLabel {String} 
+    * @param predictedLabel {String} 
+    * @param matrixName {String} The confusion matrix to use. Should be either 'train' or 'test' which refers to the confusion matrix of the training data or the testing data respectively.
     */
 
-    constructor(matrixName, predictedLabel, trueLabel) {
+    constructor(trueLabel, predictedLabel, matrixName) {
         
 
         
         
 
-        this['matrix_name'] = matrixName;this['predicted_label'] = predictedLabel;this['true_label'] = trueLabel;
+        this['true_label'] = trueLabel;this['predicted_label'] = predictedLabel;this['matrix_name'] = matrixName;
 
         
     }
@@ -60,32 +60,32 @@ export default class ClassLabelPair {
             
             
 
-            if (data.hasOwnProperty('matrix_name')) {
-                obj['matrix_name'] = ApiClient.convertToType(data['matrix_name'], 'String');
+            if (data.hasOwnProperty('true_label')) {
+                obj['true_label'] = ApiClient.convertToType(data['true_label'], 'String');
             }
             if (data.hasOwnProperty('predicted_label')) {
                 obj['predicted_label'] = ApiClient.convertToType(data['predicted_label'], 'String');
             }
-            if (data.hasOwnProperty('true_label')) {
-                obj['true_label'] = ApiClient.convertToType(data['true_label'], 'String');
+            if (data.hasOwnProperty('matrix_name')) {
+                obj['matrix_name'] = ApiClient.convertToType(data['matrix_name'], 'String');
             }
         }
         return obj;
     }
 
     /**
-    * The confusion matrix to use. Should be either 'train' or 'test' which refers to the confusion matrix of the training data or the testing data respectively.
-    * @member {String} matrix_name
+    * @member {String} true_label
     */
-    matrix_name = undefined;
+    true_label = undefined;
     /**
     * @member {String} predicted_label
     */
     predicted_label = undefined;
     /**
-    * @member {String} true_label
+    * The confusion matrix to use. Should be either 'train' or 'test' which refers to the confusion matrix of the training data or the testing data respectively.
+    * @member {String} matrix_name
     */
-    true_label = undefined;
+    matrix_name = undefined;
 
 
 

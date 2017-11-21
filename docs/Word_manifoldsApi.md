@@ -4,15 +4,15 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersWordManifoldsControllerWordManifoldAddSimilarWords**](Word_manifoldsApi.md#controllersWordManifoldsControllerWordManifoldAddSimilarWords) | **POST** /word_manifolds/{instance_name}/vocab | Add new words.
-[**controllersWordManifoldsControllerWordManifoldCreate**](Word_manifoldsApi.md#controllersWordManifoldsControllerWordManifoldCreate) | **POST** /word_manifolds | Create a word manifold model.
-[**controllersWordManifoldsControllerWordManifoldGetSimilarWords**](Word_manifoldsApi.md#controllersWordManifoldsControllerWordManifoldGetSimilarWords) | **POST** /word_manifolds/{instance_name}/similar_words | Find similar words.
-[**controllersWordManifoldsControllerWordManifoldSpellCorrect**](Word_manifoldsApi.md#controllersWordManifoldsControllerWordManifoldSpellCorrect) | **POST** /word_manifolds/{instance_name}/spell_correct | Spell correct a word.
+[**wordManifoldAddSimilarWords**](Word_manifoldsApi.md#wordManifoldAddSimilarWords) | **POST** /word_manifolds/{instance_name}/vocab | Add new words.
+[**wordManifoldCreate**](Word_manifoldsApi.md#wordManifoldCreate) | **POST** /word_manifolds | Create a word manifold model.
+[**wordManifoldGetSimilarWords**](Word_manifoldsApi.md#wordManifoldGetSimilarWords) | **POST** /word_manifolds/{instance_name}/similar_words | Find similar words.
+[**wordManifoldSpellCorrect**](Word_manifoldsApi.md#wordManifoldSpellCorrect) | **POST** /word_manifolds/{instance_name}/spell_correct | Spell correct a word.
 
 
-<a name="controllersWordManifoldsControllerWordManifoldAddSimilarWords"></a>
-# **controllersWordManifoldsControllerWordManifoldAddSimilarWords**
-> InstanceDetail controllersWordManifoldsControllerWordManifoldAddSimilarWords(instanceName, newWordList)
+<a name="wordManifoldAddSimilarWords"></a>
+# **wordManifoldAddSimilarWords**
+> InstanceDetail wordManifoldAddSimilarWords(instanceName, newWordList)
 
 Add new words.
 
@@ -35,7 +35,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let newWordList = new FeersumNluApi.NewWordList(); // NewWordList | List of new words.
 
-apiInstance.controllersWordManifoldsControllerWordManifoldAddSimilarWords(instanceName, newWordList).then((data) => {
+apiInstance.wordManifoldAddSimilarWords(instanceName, newWordList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -63,9 +63,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersWordManifoldsControllerWordManifoldCreate"></a>
-# **controllersWordManifoldsControllerWordManifoldCreate**
-> InstanceDetail controllersWordManifoldsControllerWordManifoldCreate(createDetails)
+<a name="wordManifoldCreate"></a>
+# **wordManifoldCreate**
+> InstanceDetail wordManifoldCreate(createDetails)
 
 Create a word manifold model.
 
@@ -86,7 +86,7 @@ let apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
 let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersWordManifoldsControllerWordManifoldCreate(createDetails).then((data) => {
+apiInstance.wordManifoldCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -113,9 +113,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersWordManifoldsControllerWordManifoldGetSimilarWords"></a>
-# **controllersWordManifoldsControllerWordManifoldGetSimilarWords**
-> WordAndDistanceList controllersWordManifoldsControllerWordManifoldGetSimilarWords(instanceName, wordAndThreshold)
+<a name="wordManifoldGetSimilarWords"></a>
+# **wordManifoldGetSimilarWords**
+> WordAndDistanceList wordManifoldGetSimilarWords(instanceName, wordAndThreshold)
 
 Find similar words.
 
@@ -138,7 +138,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let wordAndThreshold = new FeersumNluApi.WordAndThreshold(); // WordAndThreshold | A word token and an accompanying threshold.
 
-apiInstance.controllersWordManifoldsControllerWordManifoldGetSimilarWords(instanceName, wordAndThreshold).then((data) => {
+apiInstance.wordManifoldGetSimilarWords(instanceName, wordAndThreshold).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -166,9 +166,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersWordManifoldsControllerWordManifoldSpellCorrect"></a>
-# **controllersWordManifoldsControllerWordManifoldSpellCorrect**
-> WordAndDistanceList controllersWordManifoldsControllerWordManifoldSpellCorrect(instanceName, textInput)
+<a name="wordManifoldSpellCorrect"></a>
+# **wordManifoldSpellCorrect**
+> WordAndDistanceList wordManifoldSpellCorrect(instanceName, textInput)
 
 Spell correct a word.
 
@@ -191,7 +191,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersWordManifoldsControllerWordManifoldSpellCorrect(instanceName, textInput).then((data) => {
+apiInstance.wordManifoldSpellCorrect(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

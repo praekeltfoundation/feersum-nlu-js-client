@@ -29,17 +29,17 @@ export default class DashboardModelDetail {
     * The model instance detail.
     * @alias module:model/DashboardModelDetail
     * @class
-    * @param modelType {String} The type of this model.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param modelType {String} The type of this model.
     */
 
-    constructor(modelType, name) {
+    constructor(name, modelType) {
         
 
         
         
 
-        this['model_type'] = modelType;this['name'] = name;
+        this['name'] = name;this['model_type'] = modelType;
 
         
     }
@@ -59,42 +59,42 @@ export default class DashboardModelDetail {
             
             
 
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
-            }
-            if (data.hasOwnProperty('model_type')) {
-                obj['model_type'] = ApiClient.convertToType(data['model_type'], 'String');
-            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            }
             if (data.hasOwnProperty('peak_api_hit_rate')) {
                 obj['peak_api_hit_rate'] = ApiClient.convertToType(data['peak_api_hit_rate'], 'Number');
+            }
+            if (data.hasOwnProperty('model_type')) {
+                obj['model_type'] = ApiClient.convertToType(data['model_type'], 'String');
             }
         }
         return obj;
     }
 
     /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
-    */
-    desc = undefined;
-    /**
-    * The type of this model.
-    * @member {String} model_type
-    */
-    model_type = undefined;
-    /**
     * The sluggy-url-friendly-name of the instance.
     * @member {String} name
     */
     name = undefined;
     /**
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
+    */
+    desc = undefined;
+    /**
     * The peak api hit rate (hits/s) over the last couple of window periods. A window period is in the order of 5 minutes.
     * @member {Number} peak_api_hit_rate
     */
     peak_api_hit_rate = undefined;
+    /**
+    * The type of this model.
+    * @member {String} model_type
+    */
+    model_type = undefined;
 
 
 

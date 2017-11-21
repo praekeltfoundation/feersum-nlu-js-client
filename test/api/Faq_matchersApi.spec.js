@@ -48,110 +48,110 @@
   }
 
   describe('Faq_matchersApi', function() {
-    describe('controllersFaqMatchersControllerFaqMatcherAddTrainingSamples', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherAddTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherAddTrainingSamples
-        //instance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(function(error) {
+    describe('faqMatcherAddTrainingSamples', function() {
+      it('should call faqMatcherAddTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherAddTrainingSamples
+        //instance.faqMatcherAddTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherCreate', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherCreate
-        //instance.controllersFaqMatchersControllerFaqMatcherCreate(function(error) {
+    describe('faqMatcherCreate', function() {
+      it('should call faqMatcherCreate successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherCreate
+        //instance.faqMatcherCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherCurate', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherCurate successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherCurate
-        //instance.controllersFaqMatchersControllerFaqMatcherCurate(function(error) {
+    describe('faqMatcherCurate', function() {
+      it('should call faqMatcherCurate successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherCurate
+        //instance.faqMatcherCurate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherDelTrainingSamples', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherDelTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherDelTrainingSamples
-        //instance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(function(error) {
+    describe('faqMatcherDelTrainingSamples', function() {
+      it('should call faqMatcherDelTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherDelTrainingSamples
+        //instance.faqMatcherDelTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherGetDetails', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherGetDetails
-        //instance.controllersFaqMatchersControllerFaqMatcherGetDetails(function(error) {
+    describe('faqMatcherGetDetails', function() {
+      it('should call faqMatcherGetDetails successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherGetDetails
+        //instance.faqMatcherGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherGetDetailsAll', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherGetDetailsAll
-        //instance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll(function(error) {
+    describe('faqMatcherGetDetailsAll', function() {
+      it('should call faqMatcherGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherGetDetailsAll
+        //instance.faqMatcherGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherGetLabels', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherGetLabels successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherGetLabels
-        //instance.controllersFaqMatchersControllerFaqMatcherGetLabels(function(error) {
+    describe('faqMatcherGetLabels', function() {
+      it('should call faqMatcherGetLabels successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherGetLabels
+        //instance.faqMatcherGetLabels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherGetTrainingSamples', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherGetTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherGetTrainingSamples
-        //instance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(function(error) {
+    describe('faqMatcherGetTrainingSamples', function() {
+      it('should call faqMatcherGetTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherGetTrainingSamples
+        //instance.faqMatcherGetTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples
-        //instance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(function(error) {
+    describe('faqMatcherOnlineTrainingSamples', function() {
+      it('should call faqMatcherOnlineTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherOnlineTrainingSamples
+        //instance.faqMatcherOnlineTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherRetrieve', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherRetrieve
-        //instance.controllersFaqMatchersControllerFaqMatcherRetrieve(function(error) {
+    describe('faqMatcherRetrieve', function() {
+      it('should call faqMatcherRetrieve successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherRetrieve
+        //instance.faqMatcherRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersFaqMatchersControllerFaqMatcherTrain', function() {
-      it('should call controllersFaqMatchersControllerFaqMatcherTrain successfully', function(done) {
-        //uncomment below and update the code to test controllersFaqMatchersControllerFaqMatcherTrain
-        //instance.controllersFaqMatchersControllerFaqMatcherTrain(function(error) {
+    describe('faqMatcherTrain', function() {
+      it('should call faqMatcherTrain successfully', function(done) {
+        //uncomment below and update the code to test faqMatcherTrain
+        //instance.faqMatcherTrain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

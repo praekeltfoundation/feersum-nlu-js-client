@@ -29,17 +29,17 @@ export default class DucklingInstanceDetail {
     * The model instance detail.
     * @alias module:model/DucklingInstanceDetail
     * @class
-    * @param id {String} The unique id of a specific version of the model instance.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param id {String} The unique id of a specific version of the model instance.
     */
 
-    constructor(id, name) {
+    constructor(name, id) {
         
 
         
         
 
-        this['id'] = id;this['name'] = name;
+        this['name'] = name;this['id'] = id;
 
         
     }
@@ -59,34 +59,34 @@ export default class DucklingInstanceDetail {
             
             
 
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
         }
         return obj;
     }
 
     /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
     */
-    desc = undefined;
+    name = undefined;
     /**
     * The unique id of a specific version of the model instance.
     * @member {String} id
     */
     id = undefined;
     /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
     */
-    name = undefined;
+    desc = undefined;
 
 
 

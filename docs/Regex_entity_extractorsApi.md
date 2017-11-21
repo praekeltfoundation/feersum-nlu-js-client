@@ -4,15 +4,15 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate**](Regex_entity_extractorsApi.md#controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate) | **POST** /regex_entity_extractors | Create a regular expression entity extractor.
-[**controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails**](Regex_entity_extractorsApi.md#controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails) | **GET** /regex_entity_extractors/{instance_name} | Get details of named instance.
-[**controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll**](Regex_entity_extractorsApi.md#controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll) | **GET** /regex_entity_extractors | Get list of loaded regular expression entity extractors.
-[**controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve**](Regex_entity_extractorsApi.md#controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve) | **POST** /regex_entity_extractors/{instance_name}/retrieve | Extract information based on the regular expression.
+[**regexEntityExtractorCreate**](Regex_entity_extractorsApi.md#regexEntityExtractorCreate) | **POST** /regex_entity_extractors | Create a regular expression entity extractor.
+[**regexEntityExtractorGetDetails**](Regex_entity_extractorsApi.md#regexEntityExtractorGetDetails) | **GET** /regex_entity_extractors/{instance_name} | Get details of named instance.
+[**regexEntityExtractorGetDetailsAll**](Regex_entity_extractorsApi.md#regexEntityExtractorGetDetailsAll) | **GET** /regex_entity_extractors | Get list of loaded regular expression entity extractors.
+[**regexEntityExtractorRetrieve**](Regex_entity_extractorsApi.md#regexEntityExtractorRetrieve) | **POST** /regex_entity_extractors/{instance_name}/retrieve | Extract information based on the regular expression.
 
 
-<a name="controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate"></a>
-# **controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate**
-> RegexInstanceDetail controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate(regexEntCreateDetails)
+<a name="regexEntityExtractorCreate"></a>
+# **regexEntityExtractorCreate**
+> RegexInstanceDetail regexEntityExtractorCreate(regexEntCreateDetails)
 
 Create a regular expression entity extractor.
 
@@ -33,7 +33,7 @@ let apiInstance = new FeersumNluApi.Regex_entity_extractorsApi();
 
 let regexEntCreateDetails = new FeersumNluApi.RegexEntCreateDetails(); // RegexEntCreateDetails | The details of the instance to create.
 
-apiInstance.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate(regexEntCreateDetails).then((data) => {
+apiInstance.regexEntityExtractorCreate(regexEntCreateDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails"></a>
-# **controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails**
-> RegexInstanceDetail controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails(instanceName)
+<a name="regexEntityExtractorGetDetails"></a>
+# **regexEntityExtractorGetDetails**
+> RegexInstanceDetail regexEntityExtractorGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -83,7 +83,7 @@ let apiInstance = new FeersumNluApi.Regex_entity_extractorsApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails(instanceName).then((data) => {
+apiInstance.regexEntityExtractorGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -110,9 +110,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll"></a>
-# **controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll**
-> RegexInstanceDetailList controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll()
+<a name="regexEntityExtractorGetDetailsAll"></a>
+# **regexEntityExtractorGetDetailsAll**
+> RegexInstanceDetailList regexEntityExtractorGetDetailsAll()
 
 Get list of loaded regular expression entity extractors.
 
@@ -130,7 +130,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Regex_entity_extractorsApi();
-apiInstance.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll().then((data) => {
+apiInstance.regexEntityExtractorGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -154,9 +154,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve"></a>
-# **controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve**
-> EntityList controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve(instanceName, textInput)
+<a name="regexEntityExtractorRetrieve"></a>
+# **regexEntityExtractorRetrieve**
+> EntityList regexEntityExtractorRetrieve(instanceName, textInput)
 
 Extract information based on the regular expression.
 
@@ -179,7 +179,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve(instanceName, textInput).then((data) => {
+apiInstance.regexEntityExtractorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -4,22 +4,22 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersFaqMatchersControllerFaqMatcherAddTrainingSamples**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherAddTrainingSamples) | **POST** /faq_matchers/{instance_name}/training_samples | Add training samples.
-[**controllersFaqMatchersControllerFaqMatcherCreate**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherCreate) | **POST** /faq_matchers | Create an FAQ matcher.
-[**controllersFaqMatchersControllerFaqMatcherCurate**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherCurate) | **POST** /faq_matchers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
-[**controllersFaqMatchersControllerFaqMatcherDelTrainingSamples**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherDelTrainingSamples) | **DELETE** /faq_matchers/{instance_name}/training_samples | Delete training samples.
-[**controllersFaqMatchersControllerFaqMatcherGetDetails**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherGetDetails) | **GET** /faq_matchers/{instance_name} | Get details of named instance.
-[**controllersFaqMatchersControllerFaqMatcherGetDetailsAll**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherGetDetailsAll) | **GET** /faq_matchers | Get list of loaded FAQ matchers.
-[**controllersFaqMatchersControllerFaqMatcherGetLabels**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherGetLabels) | **GET** /faq_matchers/{instance_name}/get_labels | Get list of possible labels.
-[**controllersFaqMatchersControllerFaqMatcherGetTrainingSamples**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherGetTrainingSamples) | **GET** /faq_matchers/{instance_name}/training_samples | Get training samples.
-[**controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples) | **POST** /faq_matchers/{instance_name}/online_training_samples | Train/update the classifier online with the samples provided.
-[**controllersFaqMatchersControllerFaqMatcherRetrieve**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherRetrieve) | **POST** /faq_matchers/{instance_name}/retrieve | Match retrieve and FAQ.
-[**controllersFaqMatchersControllerFaqMatcherTrain**](Faq_matchersApi.md#controllersFaqMatchersControllerFaqMatcherTrain) | **POST** /faq_matchers/{instance_name}/train | Train the named FAQ matcher.
+[**faqMatcherAddTrainingSamples**](Faq_matchersApi.md#faqMatcherAddTrainingSamples) | **POST** /faq_matchers/{instance_name}/training_samples | Add training samples.
+[**faqMatcherCreate**](Faq_matchersApi.md#faqMatcherCreate) | **POST** /faq_matchers | Create an FAQ matcher.
+[**faqMatcherCurate**](Faq_matchersApi.md#faqMatcherCurate) | **POST** /faq_matchers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
+[**faqMatcherDelTrainingSamples**](Faq_matchersApi.md#faqMatcherDelTrainingSamples) | **DELETE** /faq_matchers/{instance_name}/training_samples | Delete training samples.
+[**faqMatcherGetDetails**](Faq_matchersApi.md#faqMatcherGetDetails) | **GET** /faq_matchers/{instance_name} | Get details of named instance.
+[**faqMatcherGetDetailsAll**](Faq_matchersApi.md#faqMatcherGetDetailsAll) | **GET** /faq_matchers | Get list of loaded FAQ matchers.
+[**faqMatcherGetLabels**](Faq_matchersApi.md#faqMatcherGetLabels) | **GET** /faq_matchers/{instance_name}/get_labels | Get list of possible labels.
+[**faqMatcherGetTrainingSamples**](Faq_matchersApi.md#faqMatcherGetTrainingSamples) | **GET** /faq_matchers/{instance_name}/training_samples | Get training samples.
+[**faqMatcherOnlineTrainingSamples**](Faq_matchersApi.md#faqMatcherOnlineTrainingSamples) | **POST** /faq_matchers/{instance_name}/online_training_samples | Train/update the classifier online with the samples provided.
+[**faqMatcherRetrieve**](Faq_matchersApi.md#faqMatcherRetrieve) | **POST** /faq_matchers/{instance_name}/retrieve | Match retrieve and FAQ.
+[**faqMatcherTrain**](Faq_matchersApi.md#faqMatcherTrain) | **POST** /faq_matchers/{instance_name}/train | Train the named FAQ matcher.
 
 
-<a name="controllersFaqMatchersControllerFaqMatcherAddTrainingSamples"></a>
-# **controllersFaqMatchersControllerFaqMatcherAddTrainingSamples**
-> TotalSamples controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList)
+<a name="faqMatcherAddTrainingSamples"></a>
+# **faqMatcherAddTrainingSamples**
+> TotalSamples faqMatcherAddTrainingSamples(instanceName, labelledTextSampleList)
 
 Add training samples.
 
@@ -42,7 +42,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.faqMatcherAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherCreate"></a>
-# **controllersFaqMatchersControllerFaqMatcherCreate**
-> InstanceDetail controllersFaqMatchersControllerFaqMatcherCreate(createDetails)
+<a name="faqMatcherCreate"></a>
+# **faqMatcherCreate**
+> InstanceDetail faqMatcherCreate(createDetails)
 
 Create an FAQ matcher.
 
@@ -93,7 +93,7 @@ let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherCreate(createDetails).then((data) => {
+apiInstance.faqMatcherCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,9 +120,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherCurate"></a>
-# **controllersFaqMatchersControllerFaqMatcherCurate**
-> LabelledTextSampleList controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair)
+<a name="faqMatcherCurate"></a>
+# **faqMatcherCurate**
+> LabelledTextSampleList faqMatcherCurate(instanceName, labelPair)
 
 Endpoint to aid in the curation of a model instance.
 
@@ -145,7 +145,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair).then((data) => {
+apiInstance.faqMatcherCurate(instanceName, labelPair).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -173,9 +173,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherDelTrainingSamples"></a>
-# **controllersFaqMatchersControllerFaqMatcherDelTrainingSamples**
-> LabelledTextSampleList controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName)
+<a name="faqMatcherDelTrainingSamples"></a>
+# **faqMatcherDelTrainingSamples**
+> LabelledTextSampleList faqMatcherDelTrainingSamples(instanceName)
 
 Delete training samples.
 
@@ -196,7 +196,7 @@ let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName).then((data) => {
+apiInstance.faqMatcherDelTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -223,9 +223,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherGetDetails"></a>
-# **controllersFaqMatchersControllerFaqMatcherGetDetails**
-> InstanceDetail controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName)
+<a name="faqMatcherGetDetails"></a>
+# **faqMatcherGetDetails**
+> InstanceDetail faqMatcherGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -246,7 +246,7 @@ let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName).then((data) => {
+apiInstance.faqMatcherGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -273,9 +273,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherGetDetailsAll"></a>
-# **controllersFaqMatchersControllerFaqMatcherGetDetailsAll**
-> InstanceDetailList controllersFaqMatchersControllerFaqMatcherGetDetailsAll()
+<a name="faqMatcherGetDetailsAll"></a>
+# **faqMatcherGetDetailsAll**
+> InstanceDetailList faqMatcherGetDetailsAll()
 
 Get list of loaded FAQ matchers.
 
@@ -293,7 +293,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Faq_matchersApi();
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll().then((data) => {
+apiInstance.faqMatcherGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -317,9 +317,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherGetLabels"></a>
-# **controllersFaqMatchersControllerFaqMatcherGetLabels**
-> ClassLabelList controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName)
+<a name="faqMatcherGetLabels"></a>
+# **faqMatcherGetLabels**
+> ClassLabelList faqMatcherGetLabels(instanceName)
 
 Get list of possible labels.
 
@@ -340,7 +340,7 @@ let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName).then((data) => {
+apiInstance.faqMatcherGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -367,9 +367,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherGetTrainingSamples"></a>
-# **controllersFaqMatchersControllerFaqMatcherGetTrainingSamples**
-> LabelledTextSampleList controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName)
+<a name="faqMatcherGetTrainingSamples"></a>
+# **faqMatcherGetTrainingSamples**
+> LabelledTextSampleList faqMatcherGetTrainingSamples(instanceName)
 
 Get training samples.
 
@@ -390,7 +390,7 @@ let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName).then((data) => {
+apiInstance.faqMatcherGetTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -417,9 +417,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples"></a>
-# **controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples**
-> TotalSamples controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList)
+<a name="faqMatcherOnlineTrainingSamples"></a>
+# **faqMatcherOnlineTrainingSamples**
+> TotalSamples faqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList)
 
 Train/update the classifier online with the samples provided.
 
@@ -442,7 +442,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.faqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -470,9 +470,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherRetrieve"></a>
-# **controllersFaqMatchersControllerFaqMatcherRetrieve**
-> ScoredLabelList controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput)
+<a name="faqMatcherRetrieve"></a>
+# **faqMatcherRetrieve**
+> ScoredLabelList faqMatcherRetrieve(instanceName, textInput)
 
 Match retrieve and FAQ.
 
@@ -495,7 +495,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput).then((data) => {
+apiInstance.faqMatcherRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -523,9 +523,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersFaqMatchersControllerFaqMatcherTrain"></a>
-# **controllersFaqMatchersControllerFaqMatcherTrain**
-> InstanceDetail controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails)
+<a name="faqMatcherTrain"></a>
+# **faqMatcherTrain**
+> InstanceDetail faqMatcherTrain(instanceName, trainDetails)
 
 Train the named FAQ matcher.
 
@@ -548,7 +548,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails).then((data) => {
+apiInstance.faqMatcherTrain(instanceName, trainDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

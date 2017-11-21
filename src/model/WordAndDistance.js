@@ -29,17 +29,17 @@ export default class WordAndDistance {
     * A word and a distance.
     * @alias module:model/WordAndDistance
     * @class
-    * @param distance {Number} 
     * @param word {String} 
+    * @param distance {Number} 
     */
 
-    constructor(distance, word) {
+    constructor(word, distance) {
         
 
         
         
 
-        this['distance'] = distance;this['word'] = word;
+        this['word'] = word;this['distance'] = distance;
 
         
     }
@@ -59,24 +59,24 @@ export default class WordAndDistance {
             
             
 
-            if (data.hasOwnProperty('distance')) {
-                obj['distance'] = ApiClient.convertToType(data['distance'], 'Number');
-            }
             if (data.hasOwnProperty('word')) {
                 obj['word'] = ApiClient.convertToType(data['word'], 'String');
+            }
+            if (data.hasOwnProperty('distance')) {
+                obj['distance'] = ApiClient.convertToType(data['distance'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-    * @member {Number} distance
-    */
-    distance = undefined;
-    /**
     * @member {String} word
     */
     word = undefined;
+    /**
+    * @member {Number} distance
+    */
+    distance = undefined;
 
 
 

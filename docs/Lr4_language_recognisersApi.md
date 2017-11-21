@@ -4,16 +4,16 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate**](Lr4_language_recognisersApi.md#controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate) | **POST** /lr4_language_recognisers | Create a LR4 text language detector.
-[**controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails**](Lr4_language_recognisersApi.md#controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails) | **GET** /lr4_language_recognisers/{instance_name} | Get details of named instance.
-[**controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll**](Lr4_language_recognisersApi.md#controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll) | **GET** /lr4_language_recognisers | Get list of loaded LR4 text language detectors.
-[**controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels**](Lr4_language_recognisersApi.md#controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels) | **GET** /lr4_language_recognisers/{instance_name}/get_labels | Get list of possible labels.
-[**controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve**](Lr4_language_recognisersApi.md#controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve) | **POST** /lr4_language_recognisers/{instance_name}/retrieve | Recognise the language the text is written in.
+[**lr4LanguageRecogniserCreate**](Lr4_language_recognisersApi.md#lr4LanguageRecogniserCreate) | **POST** /lr4_language_recognisers | Create a LR4 text language detector.
+[**lr4LanguageRecogniserGetDetails**](Lr4_language_recognisersApi.md#lr4LanguageRecogniserGetDetails) | **GET** /lr4_language_recognisers/{instance_name} | Get details of named instance.
+[**lr4LanguageRecogniserGetDetailsAll**](Lr4_language_recognisersApi.md#lr4LanguageRecogniserGetDetailsAll) | **GET** /lr4_language_recognisers | Get list of loaded LR4 text language detectors.
+[**lr4LanguageRecogniserGetLabels**](Lr4_language_recognisersApi.md#lr4LanguageRecogniserGetLabels) | **GET** /lr4_language_recognisers/{instance_name}/get_labels | Get list of possible labels.
+[**lr4LanguageRecogniserRetrieve**](Lr4_language_recognisersApi.md#lr4LanguageRecogniserRetrieve) | **POST** /lr4_language_recognisers/{instance_name}/retrieve | Recognise the language the text is written in.
 
 
-<a name="controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate"></a>
-# **controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate**
-> Lr4InstanceDetail controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(lr4CreateDetails)
+<a name="lr4LanguageRecogniserCreate"></a>
+# **lr4LanguageRecogniserCreate**
+> Lr4InstanceDetail lr4LanguageRecogniserCreate(lr4CreateDetails)
 
 Create a LR4 text language detector.
 
@@ -34,7 +34,7 @@ let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 let lr4CreateDetails = new FeersumNluApi.Lr4CreateDetails(); // Lr4CreateDetails | The details of the instance to create.
 
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(lr4CreateDetails).then((data) => {
+apiInstance.lr4LanguageRecogniserCreate(lr4CreateDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -61,9 +61,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails"></a>
-# **controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails**
-> Lr4InstanceDetail controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(instanceName)
+<a name="lr4LanguageRecogniserGetDetails"></a>
+# **lr4LanguageRecogniserGetDetails**
+> Lr4InstanceDetail lr4LanguageRecogniserGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -84,7 +84,7 @@ let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(instanceName).then((data) => {
+apiInstance.lr4LanguageRecogniserGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll"></a>
-# **controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll**
-> Lr4InstanceDetailList controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll()
+<a name="lr4LanguageRecogniserGetDetailsAll"></a>
+# **lr4LanguageRecogniserGetDetailsAll**
+> Lr4InstanceDetailList lr4LanguageRecogniserGetDetailsAll()
 
 Get list of loaded LR4 text language detectors.
 
@@ -131,7 +131,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll().then((data) => {
+apiInstance.lr4LanguageRecogniserGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -155,9 +155,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels"></a>
-# **controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels**
-> ClassLabelList controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(instanceName)
+<a name="lr4LanguageRecogniserGetLabels"></a>
+# **lr4LanguageRecogniserGetLabels**
+> ClassLabelList lr4LanguageRecogniserGetLabels(instanceName)
 
 Get list of possible labels.
 
@@ -178,7 +178,7 @@ let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(instanceName).then((data) => {
+apiInstance.lr4LanguageRecogniserGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -205,9 +205,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve"></a>
-# **controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve**
-> ScoredLabelList controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(instanceName, textInput)
+<a name="lr4LanguageRecogniserRetrieve"></a>
+# **lr4LanguageRecogniserRetrieve**
+> ScoredLabelList lr4LanguageRecogniserRetrieve(instanceName, textInput)
 
 Recognise the language the text is written in.
 
@@ -230,7 +230,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(instanceName, textInput).then((data) => {
+apiInstance.lr4LanguageRecogniserRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

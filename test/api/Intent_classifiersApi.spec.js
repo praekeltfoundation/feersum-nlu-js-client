@@ -48,110 +48,110 @@
   }
 
   describe('Intent_classifiersApi', function() {
-    describe('controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples
-        //instance.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples(function(error) {
+    describe('intentClassifierAddTrainingSamples', function() {
+      it('should call intentClassifierAddTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierAddTrainingSamples
+        //instance.intentClassifierAddTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierCreate', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierCreate
-        //instance.controllersIntentClassifiersControllerIntentClassifierCreate(function(error) {
+    describe('intentClassifierCreate', function() {
+      it('should call intentClassifierCreate successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierCreate
+        //instance.intentClassifierCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierCurate', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierCurate successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierCurate
-        //instance.controllersIntentClassifiersControllerIntentClassifierCurate(function(error) {
+    describe('intentClassifierCurate', function() {
+      it('should call intentClassifierCurate successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierCurate
+        //instance.intentClassifierCurate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples
-        //instance.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples(function(error) {
+    describe('intentClassifierDelTrainingSamples', function() {
+      it('should call intentClassifierDelTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierDelTrainingSamples
+        //instance.intentClassifierDelTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierGetDetails', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierGetDetails
-        //instance.controllersIntentClassifiersControllerIntentClassifierGetDetails(function(error) {
+    describe('intentClassifierGetDetails', function() {
+      it('should call intentClassifierGetDetails successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierGetDetails
+        //instance.intentClassifierGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierGetDetailsAll', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierGetDetailsAll
-        //instance.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll(function(error) {
+    describe('intentClassifierGetDetailsAll', function() {
+      it('should call intentClassifierGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierGetDetailsAll
+        //instance.intentClassifierGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierGetLabels', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierGetLabels successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierGetLabels
-        //instance.controllersIntentClassifiersControllerIntentClassifierGetLabels(function(error) {
+    describe('intentClassifierGetLabels', function() {
+      it('should call intentClassifierGetLabels successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierGetLabels
+        //instance.intentClassifierGetLabels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples
-        //instance.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples(function(error) {
+    describe('intentClassifierGetTrainingSamples', function() {
+      it('should call intentClassifierGetTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierGetTrainingSamples
+        //instance.intentClassifierGetTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples
-        //instance.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples(function(error) {
+    describe('intentClassifierOnlineTrainingSamples', function() {
+      it('should call intentClassifierOnlineTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierOnlineTrainingSamples
+        //instance.intentClassifierOnlineTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierRetrieve', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierRetrieve
-        //instance.controllersIntentClassifiersControllerIntentClassifierRetrieve(function(error) {
+    describe('intentClassifierRetrieve', function() {
+      it('should call intentClassifierRetrieve successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierRetrieve
+        //instance.intentClassifierRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersIntentClassifiersControllerIntentClassifierTrain', function() {
-      it('should call controllersIntentClassifiersControllerIntentClassifierTrain successfully', function(done) {
-        //uncomment below and update the code to test controllersIntentClassifiersControllerIntentClassifierTrain
-        //instance.controllersIntentClassifiersControllerIntentClassifierTrain(function(error) {
+    describe('intentClassifierTrain', function() {
+      it('should call intentClassifierTrain successfully', function(done) {
+        //uncomment below and update the code to test intentClassifierTrain
+        //instance.intentClassifierTrain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

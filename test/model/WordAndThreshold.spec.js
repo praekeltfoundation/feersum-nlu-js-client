@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(FeersumNluApi.WordAndThreshold);
     });
 
-    it('should have the property threshold (base name: "threshold")', function() {
-      // uncomment below and update the code to test the property threshold
+    it('should have the property word (base name: "word")', function() {
+      // uncomment below and update the code to test the property word
       //var instane = new FeersumNluApi.WordAndThreshold();
       //expect(instance).to.be();
     });
 
-    it('should have the property word (base name: "word")', function() {
-      // uncomment below and update the code to test the property word
+    it('should have the property threshold (base name: "threshold")', function() {
+      // uncomment below and update the code to test the property threshold
       //var instane = new FeersumNluApi.WordAndThreshold();
       //expect(instance).to.be();
     });

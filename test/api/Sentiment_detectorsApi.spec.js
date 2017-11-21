@@ -48,10 +48,10 @@
   }
 
   describe('Sentiment_detectorsApi', function() {
-    describe('controllersSentimentDetectorsControllerSentimentDetectorRetrieve', function() {
-      it('should call controllersSentimentDetectorsControllerSentimentDetectorRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersSentimentDetectorsControllerSentimentDetectorRetrieve
-        //instance.controllersSentimentDetectorsControllerSentimentDetectorRetrieve(function(error) {
+    describe('sentimentDetectorRetrieve', function() {
+      it('should call sentimentDetectorRetrieve successfully', function(done) {
+        //uncomment below and update the code to test sentimentDetectorRetrieve
+        //instance.sentimentDetectorRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

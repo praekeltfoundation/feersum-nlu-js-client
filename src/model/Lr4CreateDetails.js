@@ -29,17 +29,17 @@ export default class Lr4CreateDetails {
     * The details of the model instance to create.
     * @alias module:model/Lr4CreateDetails
     * @class
-    * @param modelFile {String} The pre-trained model to load.
     * @param name {String} The sluggy-url-friendly-name of the instance to create.
+    * @param modelFile {String} The pre-trained model to load.
     */
 
-    constructor(modelFile, name) {
+    constructor(name, modelFile) {
         
 
         
         
 
-        this['model_file'] = modelFile;this['name'] = name;
+        this['name'] = name;this['model_file'] = modelFile;
 
         
     }
@@ -59,19 +59,24 @@ export default class Lr4CreateDetails {
             
             
 
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('desc')) {
                 obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
             if (data.hasOwnProperty('model_file')) {
                 obj['model_file'] = ApiClient.convertToType(data['model_file'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
         }
         return obj;
     }
 
+    /**
+    * The sluggy-url-friendly-name of the instance to create.
+    * @member {String} name
+    */
+    name = undefined;
     /**
     * The longer existential description of this instance's purpose in life.
     * @member {String} desc
@@ -82,11 +87,6 @@ export default class Lr4CreateDetails {
     * @member {String} model_file
     */
     model_file = undefined;
-    /**
-    * The sluggy-url-friendly-name of the instance to create.
-    * @member {String} name
-    */
-    name = undefined;
 
 
 

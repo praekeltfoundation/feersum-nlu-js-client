@@ -48,40 +48,40 @@
   }
 
   describe('Word_manifoldsApi', function() {
-    describe('controllersWordManifoldsControllerWordManifoldAddSimilarWords', function() {
-      it('should call controllersWordManifoldsControllerWordManifoldAddSimilarWords successfully', function(done) {
-        //uncomment below and update the code to test controllersWordManifoldsControllerWordManifoldAddSimilarWords
-        //instance.controllersWordManifoldsControllerWordManifoldAddSimilarWords(function(error) {
+    describe('wordManifoldAddSimilarWords', function() {
+      it('should call wordManifoldAddSimilarWords successfully', function(done) {
+        //uncomment below and update the code to test wordManifoldAddSimilarWords
+        //instance.wordManifoldAddSimilarWords(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersWordManifoldsControllerWordManifoldCreate', function() {
-      it('should call controllersWordManifoldsControllerWordManifoldCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersWordManifoldsControllerWordManifoldCreate
-        //instance.controllersWordManifoldsControllerWordManifoldCreate(function(error) {
+    describe('wordManifoldCreate', function() {
+      it('should call wordManifoldCreate successfully', function(done) {
+        //uncomment below and update the code to test wordManifoldCreate
+        //instance.wordManifoldCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersWordManifoldsControllerWordManifoldGetSimilarWords', function() {
-      it('should call controllersWordManifoldsControllerWordManifoldGetSimilarWords successfully', function(done) {
-        //uncomment below and update the code to test controllersWordManifoldsControllerWordManifoldGetSimilarWords
-        //instance.controllersWordManifoldsControllerWordManifoldGetSimilarWords(function(error) {
+    describe('wordManifoldGetSimilarWords', function() {
+      it('should call wordManifoldGetSimilarWords successfully', function(done) {
+        //uncomment below and update the code to test wordManifoldGetSimilarWords
+        //instance.wordManifoldGetSimilarWords(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersWordManifoldsControllerWordManifoldSpellCorrect', function() {
-      it('should call controllersWordManifoldsControllerWordManifoldSpellCorrect successfully', function(done) {
-        //uncomment below and update the code to test controllersWordManifoldsControllerWordManifoldSpellCorrect
-        //instance.controllersWordManifoldsControllerWordManifoldSpellCorrect(function(error) {
+    describe('wordManifoldSpellCorrect', function() {
+      it('should call wordManifoldSpellCorrect successfully', function(done) {
+        //uncomment below and update the code to test wordManifoldSpellCorrect
+        //instance.wordManifoldSpellCorrect(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

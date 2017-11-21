@@ -29,20 +29,20 @@ export default class SimilarityInstanceDetail {
     * The model instance detail.
     * @alias module:model/SimilarityInstanceDetail
     * @class
-    * @param id {String} The unique id of a specific version of the model instance.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param id {String} The unique id of a specific version of the model instance.
     * @param similarWords {Array.<String>} The list of similar words to test against.
     * @param threshold {Number} The threshold below which words are not similar.
     * @param wordManifold {String} The word manifold used to measure word similarity.
     */
 
-    constructor(id, name, similarWords, threshold, wordManifold) {
+    constructor(name, id, similarWords, threshold, wordManifold) {
         
 
         
         
 
-        this['id'] = id;this['name'] = name;this['similar_words'] = similarWords;this['threshold'] = threshold;this['word_manifold'] = wordManifold;
+        this['name'] = name;this['id'] = id;this['similar_words'] = similarWords;this['threshold'] = threshold;this['word_manifold'] = wordManifold;
 
         
     }
@@ -62,14 +62,14 @@ export default class SimilarityInstanceDetail {
             
             
 
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
             if (data.hasOwnProperty('similar_words')) {
                 obj['similar_words'] = ApiClient.convertToType(data['similar_words'], ['String']);
@@ -85,20 +85,20 @@ export default class SimilarityInstanceDetail {
     }
 
     /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
     */
-    desc = undefined;
+    name = undefined;
     /**
     * The unique id of a specific version of the model instance.
     * @member {String} id
     */
     id = undefined;
     /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
     */
-    name = undefined;
+    desc = undefined;
     /**
     * The list of similar words to test against.
     * @member {Array.<String>} similar_words

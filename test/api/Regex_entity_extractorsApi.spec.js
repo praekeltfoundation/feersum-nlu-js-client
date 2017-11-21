@@ -48,40 +48,40 @@
   }
 
   describe('Regex_entity_extractorsApi', function() {
-    describe('controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate', function() {
-      it('should call controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate
-        //instance.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate(function(error) {
+    describe('regexEntityExtractorCreate', function() {
+      it('should call regexEntityExtractorCreate successfully', function(done) {
+        //uncomment below and update the code to test regexEntityExtractorCreate
+        //instance.regexEntityExtractorCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails', function() {
-      it('should call controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails
-        //instance.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails(function(error) {
+    describe('regexEntityExtractorGetDetails', function() {
+      it('should call regexEntityExtractorGetDetails successfully', function(done) {
+        //uncomment below and update the code to test regexEntityExtractorGetDetails
+        //instance.regexEntityExtractorGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll', function() {
-      it('should call controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll
-        //instance.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll(function(error) {
+    describe('regexEntityExtractorGetDetailsAll', function() {
+      it('should call regexEntityExtractorGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test regexEntityExtractorGetDetailsAll
+        //instance.regexEntityExtractorGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve', function() {
-      it('should call controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve
-        //instance.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve(function(error) {
+    describe('regexEntityExtractorRetrieve', function() {
+      it('should call regexEntityExtractorRetrieve successfully', function(done) {
+        //uncomment below and update the code to test regexEntityExtractorRetrieve
+        //instance.regexEntityExtractorRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

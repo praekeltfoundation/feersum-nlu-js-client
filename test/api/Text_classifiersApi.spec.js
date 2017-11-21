@@ -48,100 +48,100 @@
   }
 
   describe('Text_classifiersApi', function() {
-    describe('controllersTextClassifiersControllerTextClassifierAddTrainingSamples', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierAddTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierAddTrainingSamples
-        //instance.controllersTextClassifiersControllerTextClassifierAddTrainingSamples(function(error) {
+    describe('textClassifierAddTrainingSamples', function() {
+      it('should call textClassifierAddTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test textClassifierAddTrainingSamples
+        //instance.textClassifierAddTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierCreate', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierCreate
-        //instance.controllersTextClassifiersControllerTextClassifierCreate(function(error) {
+    describe('textClassifierCreate', function() {
+      it('should call textClassifierCreate successfully', function(done) {
+        //uncomment below and update the code to test textClassifierCreate
+        //instance.textClassifierCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierCurate', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierCurate successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierCurate
-        //instance.controllersTextClassifiersControllerTextClassifierCurate(function(error) {
+    describe('textClassifierCurate', function() {
+      it('should call textClassifierCurate successfully', function(done) {
+        //uncomment below and update the code to test textClassifierCurate
+        //instance.textClassifierCurate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierDelTrainingSamples', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierDelTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierDelTrainingSamples
-        //instance.controllersTextClassifiersControllerTextClassifierDelTrainingSamples(function(error) {
+    describe('textClassifierDelTrainingSamples', function() {
+      it('should call textClassifierDelTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test textClassifierDelTrainingSamples
+        //instance.textClassifierDelTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierGetDetails', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierGetDetails
-        //instance.controllersTextClassifiersControllerTextClassifierGetDetails(function(error) {
+    describe('textClassifierGetDetails', function() {
+      it('should call textClassifierGetDetails successfully', function(done) {
+        //uncomment below and update the code to test textClassifierGetDetails
+        //instance.textClassifierGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierGetDetailsAll', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierGetDetailsAll
-        //instance.controllersTextClassifiersControllerTextClassifierGetDetailsAll(function(error) {
+    describe('textClassifierGetDetailsAll', function() {
+      it('should call textClassifierGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test textClassifierGetDetailsAll
+        //instance.textClassifierGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierGetLabels', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierGetLabels successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierGetLabels
-        //instance.controllersTextClassifiersControllerTextClassifierGetLabels(function(error) {
+    describe('textClassifierGetLabels', function() {
+      it('should call textClassifierGetLabels successfully', function(done) {
+        //uncomment below and update the code to test textClassifierGetLabels
+        //instance.textClassifierGetLabels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierGetTrainingSamples', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierGetTrainingSamples successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierGetTrainingSamples
-        //instance.controllersTextClassifiersControllerTextClassifierGetTrainingSamples(function(error) {
+    describe('textClassifierGetTrainingSamples', function() {
+      it('should call textClassifierGetTrainingSamples successfully', function(done) {
+        //uncomment below and update the code to test textClassifierGetTrainingSamples
+        //instance.textClassifierGetTrainingSamples(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierRetrieve', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierRetrieve
-        //instance.controllersTextClassifiersControllerTextClassifierRetrieve(function(error) {
+    describe('textClassifierRetrieve', function() {
+      it('should call textClassifierRetrieve successfully', function(done) {
+        //uncomment below and update the code to test textClassifierRetrieve
+        //instance.textClassifierRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersTextClassifiersControllerTextClassifierTrain', function() {
-      it('should call controllersTextClassifiersControllerTextClassifierTrain successfully', function(done) {
-        //uncomment below and update the code to test controllersTextClassifiersControllerTextClassifierTrain
-        //instance.controllersTextClassifiersControllerTextClassifierTrain(function(error) {
+    describe('textClassifierTrain', function() {
+      it('should call textClassifierTrain successfully', function(done) {
+        //uncomment below and update the code to test textClassifierTrain
+        //instance.textClassifierTrain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

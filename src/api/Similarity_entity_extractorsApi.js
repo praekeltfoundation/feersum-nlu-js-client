@@ -45,12 +45,12 @@ export default class Similarity_entity_extractorsApi {
      * @param {module:model/SimilarityEntCreateDetails} similarityEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetail} and HTTP response
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateWithHttpInfo(similarityEntCreateDetails) {
+    similarityEntityExtractorCreateWithHttpInfo(similarityEntCreateDetails) {
       let postBody = similarityEntCreateDetails;
 
       // verify the required parameter 'similarityEntCreateDetails' is set
       if (similarityEntCreateDetails === undefined || similarityEntCreateDetails === null) {
-        throw new Error("Missing the required parameter 'similarityEntCreateDetails' when calling controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate");
+        throw new Error("Missing the required parameter 'similarityEntCreateDetails' when calling similarityEntityExtractorCreate");
       }
 
 
@@ -81,8 +81,8 @@ export default class Similarity_entity_extractorsApi {
      * @param {module:model/SimilarityEntCreateDetails} similarityEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetail}
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails) {
-      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreateWithHttpInfo(similarityEntCreateDetails)
+    similarityEntityExtractorCreate(similarityEntCreateDetails) {
+      return this.similarityEntityExtractorCreateWithHttpInfo(similarityEntCreateDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -95,12 +95,12 @@ export default class Similarity_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetail} and HTTP response
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsWithHttpInfo(instanceName) {
+    similarityEntityExtractorGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling similarityEntityExtractorGetDetails");
       }
 
 
@@ -132,8 +132,8 @@ export default class Similarity_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetail}
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName) {
-      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsWithHttpInfo(instanceName)
+    similarityEntityExtractorGetDetails(instanceName) {
+      return this.similarityEntityExtractorGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -145,7 +145,7 @@ export default class Similarity_entity_extractorsApi {
      * Get the list of loaded similarity entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimilarityInstanceDetailList} and HTTP response
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllWithHttpInfo() {
+    similarityEntityExtractorGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -175,8 +175,8 @@ export default class Similarity_entity_extractorsApi {
      * Get the list of loaded similarity entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimilarityInstanceDetailList}
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll() {
-      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAllWithHttpInfo()
+    similarityEntityExtractorGetDetailsAll() {
+      return this.similarityEntityExtractorGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -190,17 +190,17 @@ export default class Similarity_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
+    similarityEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling similarityEntityExtractorRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling similarityEntityExtractorRetrieve");
       }
 
 
@@ -233,8 +233,8 @@ export default class Similarity_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
      */
-    controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput) {
-      return this.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+    similarityEntityExtractorRetrieve(instanceName, textInput) {
+      return this.similarityEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

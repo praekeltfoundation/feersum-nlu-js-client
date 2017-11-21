@@ -48,40 +48,40 @@
   }
 
   describe('Duckling_entity_extractorsApi', function() {
-    describe('controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate', function() {
-      it('should call controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate
-        //instance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(function(error) {
+    describe('ducklingEntityExtractorCreate', function() {
+      it('should call ducklingEntityExtractorCreate successfully', function(done) {
+        //uncomment below and update the code to test ducklingEntityExtractorCreate
+        //instance.ducklingEntityExtractorCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails', function() {
-      it('should call controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails
-        //instance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(function(error) {
+    describe('ducklingEntityExtractorGetDetails', function() {
+      it('should call ducklingEntityExtractorGetDetails successfully', function(done) {
+        //uncomment below and update the code to test ducklingEntityExtractorGetDetails
+        //instance.ducklingEntityExtractorGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll', function() {
-      it('should call controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll
-        //instance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll(function(error) {
+    describe('ducklingEntityExtractorGetDetailsAll', function() {
+      it('should call ducklingEntityExtractorGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test ducklingEntityExtractorGetDetailsAll
+        //instance.ducklingEntityExtractorGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve', function() {
-      it('should call controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve
-        //instance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(function(error) {
+    describe('ducklingEntityExtractorRetrieve', function() {
+      it('should call ducklingEntityExtractorRetrieve successfully', function(done) {
+        //uncomment below and update the code to test ducklingEntityExtractorRetrieve
+        //instance.ducklingEntityExtractorRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

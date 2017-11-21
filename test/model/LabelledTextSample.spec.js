@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(FeersumNluApi.LabelledTextSample);
     });
 
-    it('should have the property label (base name: "label")', function() {
-      // uncomment below and update the code to test the property label
+    it('should have the property text (base name: "text")', function() {
+      // uncomment below and update the code to test the property text
       //var instane = new FeersumNluApi.LabelledTextSample();
       //expect(instance).to.be();
     });
 
-    it('should have the property text (base name: "text")', function() {
-      // uncomment below and update the code to test the property text
+    it('should have the property label (base name: "label")', function() {
+      // uncomment below and update the code to test the property label
       //var instane = new FeersumNluApi.LabelledTextSample();
       //expect(instance).to.be();
     });

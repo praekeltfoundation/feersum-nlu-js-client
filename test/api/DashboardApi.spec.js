@@ -48,10 +48,10 @@
   }
 
   describe('DashboardApi', function() {
-    describe('controllersDashboardControllerDashboardGetDetails', function() {
-      it('should call controllersDashboardControllerDashboardGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersDashboardControllerDashboardGetDetails
-        //instance.controllersDashboardControllerDashboardGetDetails(function(error) {
+    describe('dashboardGetDetails', function() {
+      it('should call dashboardGetDetails successfully', function(done) {
+        //uncomment below and update the code to test dashboardGetDetails
+        //instance.dashboardGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -48,50 +48,50 @@
   }
 
   describe('Lr4_language_recognisersApi', function() {
-    describe('controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate', function() {
-      it('should call controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate
-        //instance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(function(error) {
+    describe('lr4LanguageRecogniserCreate', function() {
+      it('should call lr4LanguageRecogniserCreate successfully', function(done) {
+        //uncomment below and update the code to test lr4LanguageRecogniserCreate
+        //instance.lr4LanguageRecogniserCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails', function() {
-      it('should call controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails
-        //instance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(function(error) {
+    describe('lr4LanguageRecogniserGetDetails', function() {
+      it('should call lr4LanguageRecogniserGetDetails successfully', function(done) {
+        //uncomment below and update the code to test lr4LanguageRecogniserGetDetails
+        //instance.lr4LanguageRecogniserGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll', function() {
-      it('should call controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll
-        //instance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll(function(error) {
+    describe('lr4LanguageRecogniserGetDetailsAll', function() {
+      it('should call lr4LanguageRecogniserGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test lr4LanguageRecogniserGetDetailsAll
+        //instance.lr4LanguageRecogniserGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels', function() {
-      it('should call controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels successfully', function(done) {
-        //uncomment below and update the code to test controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels
-        //instance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(function(error) {
+    describe('lr4LanguageRecogniserGetLabels', function() {
+      it('should call lr4LanguageRecogniserGetLabels successfully', function(done) {
+        //uncomment below and update the code to test lr4LanguageRecogniserGetLabels
+        //instance.lr4LanguageRecogniserGetLabels(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve', function() {
-      it('should call controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve
-        //instance.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(function(error) {
+    describe('lr4LanguageRecogniserRetrieve', function() {
+      it('should call lr4LanguageRecogniserRetrieve successfully', function(done) {
+        //uncomment below and update the code to test lr4LanguageRecogniserRetrieve
+        //instance.lr4LanguageRecogniserRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

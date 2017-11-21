@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**threshold** | **Number** |  | 
 **word** | **String** |  | 
+**threshold** | **Number** |  | 
 
 

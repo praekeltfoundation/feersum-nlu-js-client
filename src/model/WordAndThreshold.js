@@ -29,17 +29,17 @@ export default class WordAndThreshold {
     * A word and a threshold.
     * @alias module:model/WordAndThreshold
     * @class
-    * @param threshold {Number} 
     * @param word {String} 
+    * @param threshold {Number} 
     */
 
-    constructor(threshold, word) {
+    constructor(word, threshold) {
         
 
         
         
 
-        this['threshold'] = threshold;this['word'] = word;
+        this['word'] = word;this['threshold'] = threshold;
 
         
     }
@@ -59,24 +59,24 @@ export default class WordAndThreshold {
             
             
 
-            if (data.hasOwnProperty('threshold')) {
-                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
-            }
             if (data.hasOwnProperty('word')) {
                 obj['word'] = ApiClient.convertToType(data['word'], 'String');
+            }
+            if (data.hasOwnProperty('threshold')) {
+                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-    * @member {Number} threshold
-    */
-    threshold = undefined;
-    /**
     * @member {String} word
     */
     word = undefined;
+    /**
+    * @member {Number} threshold
+    */
+    threshold = undefined;
 
 
 

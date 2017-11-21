@@ -54,26 +54,26 @@
       //expect(instance).to.be.a(FeersumNluApi.DashboardModelDetail);
     });
 
-    it('should have the property desc (base name: "desc")', function() {
-      // uncomment below and update the code to test the property desc
-      //var instane = new FeersumNluApi.DashboardModelDetail();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property modelType (base name: "model_type")', function() {
-      // uncomment below and update the code to test the property modelType
-      //var instane = new FeersumNluApi.DashboardModelDetail();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instane = new FeersumNluApi.DashboardModelDetail();
       //expect(instance).to.be();
     });
 
+    it('should have the property desc (base name: "desc")', function() {
+      // uncomment below and update the code to test the property desc
+      //var instane = new FeersumNluApi.DashboardModelDetail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property peakApiHitRate (base name: "peak_api_hit_rate")', function() {
       // uncomment below and update the code to test the property peakApiHitRate
+      //var instane = new FeersumNluApi.DashboardModelDetail();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property modelType (base name: "model_type")', function() {
+      // uncomment below and update the code to test the property modelType
       //var instane = new FeersumNluApi.DashboardModelDetail();
       //expect(instance).to.be();
     });

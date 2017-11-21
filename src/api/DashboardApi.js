@@ -40,7 +40,7 @@ export default class DashboardApi {
      * Get your list of loaded model instances, the total API hits for each, API version, etc.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DashboardDetail} and HTTP response
      */
-    controllersDashboardControllerDashboardGetDetailsWithHttpInfo() {
+    dashboardGetDetailsWithHttpInfo() {
       let postBody = null;
 
 
@@ -70,8 +70,8 @@ export default class DashboardApi {
      * Get your list of loaded model instances, the total API hits for each, API version, etc.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DashboardDetail}
      */
-    controllersDashboardControllerDashboardGetDetails() {
-      return this.controllersDashboardControllerDashboardGetDetailsWithHttpInfo()
+    dashboardGetDetails() {
+      return this.dashboardGetDetailsWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -29,18 +29,18 @@ export default class Lr4InstanceDetail {
     * The model instance detail.
     * @alias module:model/Lr4InstanceDetail
     * @class
+    * @param name {String} The sluggy-url-friendly-name of the instance.
     * @param id {String} The unique id of a specific version of the model instance.
     * @param modelFile {String} The pre-trained model this instance was created from.
-    * @param name {String} The sluggy-url-friendly-name of the instance.
     */
 
-    constructor(id, modelFile, name) {
+    constructor(name, id, modelFile) {
         
 
         
         
 
-        this['id'] = id;this['model_file'] = modelFile;this['name'] = name;
+        this['name'] = name;this['id'] = id;this['model_file'] = modelFile;
 
         
     }
@@ -60,42 +60,42 @@ export default class Lr4InstanceDetail {
             
             
 
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            }
             if (data.hasOwnProperty('model_file')) {
                 obj['model_file'] = ApiClient.convertToType(data['model_file'], 'String');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
         }
         return obj;
     }
 
     /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
     */
-    desc = undefined;
+    name = undefined;
     /**
     * The unique id of a specific version of the model instance.
     * @member {String} id
     */
     id = undefined;
     /**
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
+    */
+    desc = undefined;
+    /**
     * The pre-trained model this instance was created from.
     * @member {String} model_file
     */
     model_file = undefined;
-    /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
-    */
-    name = undefined;
 
 
 

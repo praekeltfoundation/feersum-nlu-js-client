@@ -31,18 +31,18 @@ export default class DashboardDetail {
     * @alias module:model/DashboardDetail
     * @class
     * @param apiVersion {String} The version of the http api.
-    * @param modelList {Array.<module:model/DashboardModelDetail>} A list of models' instance details.
-    * @param peakApiHitRate {Number} The peak api hit rate (hits/s) over the last couple of window periods. A window period is in the order of 5 minutes.
     * @param serviceName {String} The details of this service.
+    * @param peakApiHitRate {Number} The peak api hit rate (hits/s) over the last couple of window periods. A window period is in the order of 5 minutes.
+    * @param modelList {Array.<module:model/DashboardModelDetail>} A list of models' instance details.
     */
 
-    constructor(apiVersion, modelList, peakApiHitRate, serviceName) {
+    constructor(apiVersion, serviceName, peakApiHitRate, modelList) {
         
 
         
         
 
-        this['api_version'] = apiVersion;this['model_list'] = modelList;this['peak_api_hit_rate'] = peakApiHitRate;this['service_name'] = serviceName;
+        this['api_version'] = apiVersion;this['service_name'] = serviceName;this['peak_api_hit_rate'] = peakApiHitRate;this['model_list'] = modelList;
 
         
     }
@@ -65,14 +65,14 @@ export default class DashboardDetail {
             if (data.hasOwnProperty('api_version')) {
                 obj['api_version'] = ApiClient.convertToType(data['api_version'], 'String');
             }
-            if (data.hasOwnProperty('model_list')) {
-                obj['model_list'] = ApiClient.convertToType(data['model_list'], [DashboardModelDetail]);
+            if (data.hasOwnProperty('service_name')) {
+                obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
             }
             if (data.hasOwnProperty('peak_api_hit_rate')) {
                 obj['peak_api_hit_rate'] = ApiClient.convertToType(data['peak_api_hit_rate'], 'Number');
             }
-            if (data.hasOwnProperty('service_name')) {
-                obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
+            if (data.hasOwnProperty('model_list')) {
+                obj['model_list'] = ApiClient.convertToType(data['model_list'], [DashboardModelDetail]);
             }
         }
         return obj;
@@ -84,20 +84,20 @@ export default class DashboardDetail {
     */
     api_version = undefined;
     /**
-    * A list of models' instance details.
-    * @member {Array.<module:model/DashboardModelDetail>} model_list
+    * The details of this service.
+    * @member {String} service_name
     */
-    model_list = undefined;
+    service_name = undefined;
     /**
     * The peak api hit rate (hits/s) over the last couple of window periods. A window period is in the order of 5 minutes.
     * @member {Number} peak_api_hit_rate
     */
     peak_api_hit_rate = undefined;
     /**
-    * The details of this service.
-    * @member {String} service_name
+    * A list of models' instance details.
+    * @member {Array.<module:model/DashboardModelDetail>} model_list
     */
-    service_name = undefined;
+    model_list = undefined;
 
 
 

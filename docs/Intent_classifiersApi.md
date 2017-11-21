@@ -4,22 +4,22 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples) | **POST** /intent_classifiers/{instance_name}/training_samples | Add training samples.
-[**controllersIntentClassifiersControllerIntentClassifierCreate**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierCreate) | **POST** /intent_classifiers | Create an intent classifier.
-[**controllersIntentClassifiersControllerIntentClassifierCurate**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierCurate) | **POST** /intent_classifiers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
-[**controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples) | **DELETE** /intent_classifiers/{instance_name}/training_samples | Delete training samples.
-[**controllersIntentClassifiersControllerIntentClassifierGetDetails**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierGetDetails) | **GET** /intent_classifiers/{instance_name} | Get details of named instance.
-[**controllersIntentClassifiersControllerIntentClassifierGetDetailsAll**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierGetDetailsAll) | **GET** /intent_classifiers | Get list of loaded intent classifiers.
-[**controllersIntentClassifiersControllerIntentClassifierGetLabels**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierGetLabels) | **GET** /intent_classifiers/{instance_name}/get_labels | Get list of possible labels.
-[**controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples) | **GET** /intent_classifiers/{instance_name}/training_samples | Get training samples.
-[**controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples) | **POST** /intent_classifiers/{instance_name}/online_training_samples | Train/update the classifier online with the samples provided.
-[**controllersIntentClassifiersControllerIntentClassifierRetrieve**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierRetrieve) | **POST** /intent_classifiers/{instance_name}/retrieve | Classify intent.
-[**controllersIntentClassifiersControllerIntentClassifierTrain**](Intent_classifiersApi.md#controllersIntentClassifiersControllerIntentClassifierTrain) | **POST** /intent_classifiers/{instance_name}/train | Train the named intent classifier.
+[**intentClassifierAddTrainingSamples**](Intent_classifiersApi.md#intentClassifierAddTrainingSamples) | **POST** /intent_classifiers/{instance_name}/training_samples | Add training samples.
+[**intentClassifierCreate**](Intent_classifiersApi.md#intentClassifierCreate) | **POST** /intent_classifiers | Create an intent classifier.
+[**intentClassifierCurate**](Intent_classifiersApi.md#intentClassifierCurate) | **POST** /intent_classifiers/{instance_name}/curate | Endpoint to aid in the curation of a model instance.
+[**intentClassifierDelTrainingSamples**](Intent_classifiersApi.md#intentClassifierDelTrainingSamples) | **DELETE** /intent_classifiers/{instance_name}/training_samples | Delete training samples.
+[**intentClassifierGetDetails**](Intent_classifiersApi.md#intentClassifierGetDetails) | **GET** /intent_classifiers/{instance_name} | Get details of named instance.
+[**intentClassifierGetDetailsAll**](Intent_classifiersApi.md#intentClassifierGetDetailsAll) | **GET** /intent_classifiers | Get list of loaded intent classifiers.
+[**intentClassifierGetLabels**](Intent_classifiersApi.md#intentClassifierGetLabels) | **GET** /intent_classifiers/{instance_name}/get_labels | Get list of possible labels.
+[**intentClassifierGetTrainingSamples**](Intent_classifiersApi.md#intentClassifierGetTrainingSamples) | **GET** /intent_classifiers/{instance_name}/training_samples | Get training samples.
+[**intentClassifierOnlineTrainingSamples**](Intent_classifiersApi.md#intentClassifierOnlineTrainingSamples) | **POST** /intent_classifiers/{instance_name}/online_training_samples | Train/update the classifier online with the samples provided.
+[**intentClassifierRetrieve**](Intent_classifiersApi.md#intentClassifierRetrieve) | **POST** /intent_classifiers/{instance_name}/retrieve | Classify intent.
+[**intentClassifierTrain**](Intent_classifiersApi.md#intentClassifierTrain) | **POST** /intent_classifiers/{instance_name}/train | Train the named intent classifier.
 
 
-<a name="controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples"></a>
-# **controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples**
-> TotalSamples controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples(instanceName, labelledTextSampleList)
+<a name="intentClassifierAddTrainingSamples"></a>
+# **intentClassifierAddTrainingSamples**
+> TotalSamples intentClassifierAddTrainingSamples(instanceName, labelledTextSampleList)
 
 Add training samples.
 
@@ -42,7 +42,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.intentClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -70,9 +70,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierCreate"></a>
-# **controllersIntentClassifiersControllerIntentClassifierCreate**
-> InstanceDetail controllersIntentClassifiersControllerIntentClassifierCreate(createDetails)
+<a name="intentClassifierCreate"></a>
+# **intentClassifierCreate**
+> InstanceDetail intentClassifierCreate(createDetails)
 
 Create an intent classifier.
 
@@ -93,7 +93,7 @@ let apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierCreate(createDetails).then((data) => {
+apiInstance.intentClassifierCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -120,9 +120,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierCurate"></a>
-# **controllersIntentClassifiersControllerIntentClassifierCurate**
-> LabelledTextSampleList controllersIntentClassifiersControllerIntentClassifierCurate(instanceName, labelPair)
+<a name="intentClassifierCurate"></a>
+# **intentClassifierCurate**
+> LabelledTextSampleList intentClassifierCurate(instanceName, labelPair)
 
 Endpoint to aid in the curation of a model instance.
 
@@ -145,7 +145,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierCurate(instanceName, labelPair).then((data) => {
+apiInstance.intentClassifierCurate(instanceName, labelPair).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -173,9 +173,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples"></a>
-# **controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples**
-> LabelledTextSampleList controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples(instanceName)
+<a name="intentClassifierDelTrainingSamples"></a>
+# **intentClassifierDelTrainingSamples**
+> LabelledTextSampleList intentClassifierDelTrainingSamples(instanceName)
 
 Delete training samples.
 
@@ -196,7 +196,7 @@ let apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierDelTrainingSamples(instanceName).then((data) => {
+apiInstance.intentClassifierDelTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -223,9 +223,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierGetDetails"></a>
-# **controllersIntentClassifiersControllerIntentClassifierGetDetails**
-> InstanceDetail controllersIntentClassifiersControllerIntentClassifierGetDetails(instanceName)
+<a name="intentClassifierGetDetails"></a>
+# **intentClassifierGetDetails**
+> InstanceDetail intentClassifierGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -246,7 +246,7 @@ let apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetails(instanceName).then((data) => {
+apiInstance.intentClassifierGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -273,9 +273,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierGetDetailsAll"></a>
-# **controllersIntentClassifiersControllerIntentClassifierGetDetailsAll**
-> InstanceDetailList controllersIntentClassifiersControllerIntentClassifierGetDetailsAll()
+<a name="intentClassifierGetDetailsAll"></a>
+# **intentClassifierGetDetailsAll**
+> InstanceDetailList intentClassifierGetDetailsAll()
 
 Get list of loaded intent classifiers.
 
@@ -293,7 +293,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Intent_classifiersApi();
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetDetailsAll().then((data) => {
+apiInstance.intentClassifierGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -317,9 +317,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierGetLabels"></a>
-# **controllersIntentClassifiersControllerIntentClassifierGetLabels**
-> ClassLabelList controllersIntentClassifiersControllerIntentClassifierGetLabels(instanceName)
+<a name="intentClassifierGetLabels"></a>
+# **intentClassifierGetLabels**
+> ClassLabelList intentClassifierGetLabels(instanceName)
 
 Get list of possible labels.
 
@@ -340,7 +340,7 @@ let apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetLabels(instanceName).then((data) => {
+apiInstance.intentClassifierGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -367,9 +367,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples"></a>
-# **controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples**
-> LabelledTextSampleList controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples(instanceName)
+<a name="intentClassifierGetTrainingSamples"></a>
+# **intentClassifierGetTrainingSamples**
+> LabelledTextSampleList intentClassifierGetTrainingSamples(instanceName)
 
 Get training samples.
 
@@ -390,7 +390,7 @@ let apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierGetTrainingSamples(instanceName).then((data) => {
+apiInstance.intentClassifierGetTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -417,9 +417,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples"></a>
-# **controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples**
-> TotalSamples controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList)
+<a name="intentClassifierOnlineTrainingSamples"></a>
+# **intentClassifierOnlineTrainingSamples**
+> TotalSamples intentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList)
 
 Train/update the classifier online with the samples provided.
 
@@ -442,7 +442,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.intentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -470,9 +470,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierRetrieve"></a>
-# **controllersIntentClassifiersControllerIntentClassifierRetrieve**
-> ScoredLabelList controllersIntentClassifiersControllerIntentClassifierRetrieve(instanceName, textInput)
+<a name="intentClassifierRetrieve"></a>
+# **intentClassifierRetrieve**
+> ScoredLabelList intentClassifierRetrieve(instanceName, textInput)
 
 Classify intent.
 
@@ -495,7 +495,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierRetrieve(instanceName, textInput).then((data) => {
+apiInstance.intentClassifierRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -523,9 +523,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersIntentClassifiersControllerIntentClassifierTrain"></a>
-# **controllersIntentClassifiersControllerIntentClassifierTrain**
-> InstanceDetail controllersIntentClassifiersControllerIntentClassifierTrain(instanceName, trainDetails)
+<a name="intentClassifierTrain"></a>
+# **intentClassifierTrain**
+> InstanceDetail intentClassifierTrain(instanceName, trainDetails)
 
 Train the named intent classifier.
 
@@ -548,7 +548,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.controllersIntentClassifiersControllerIntentClassifierTrain(instanceName, trainDetails).then((data) => {
+apiInstance.intentClassifierTrain(instanceName, trainDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

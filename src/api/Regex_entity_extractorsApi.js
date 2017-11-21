@@ -45,12 +45,12 @@ export default class Regex_entity_extractorsApi {
      * @param {module:model/RegexEntCreateDetails} regexEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetail} and HTTP response
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateWithHttpInfo(regexEntCreateDetails) {
+    regexEntityExtractorCreateWithHttpInfo(regexEntCreateDetails) {
       let postBody = regexEntCreateDetails;
 
       // verify the required parameter 'regexEntCreateDetails' is set
       if (regexEntCreateDetails === undefined || regexEntCreateDetails === null) {
-        throw new Error("Missing the required parameter 'regexEntCreateDetails' when calling controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate");
+        throw new Error("Missing the required parameter 'regexEntCreateDetails' when calling regexEntityExtractorCreate");
       }
 
 
@@ -81,8 +81,8 @@ export default class Regex_entity_extractorsApi {
      * @param {module:model/RegexEntCreateDetails} regexEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetail}
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorCreate(regexEntCreateDetails) {
-      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorCreateWithHttpInfo(regexEntCreateDetails)
+    regexEntityExtractorCreate(regexEntCreateDetails) {
+      return this.regexEntityExtractorCreateWithHttpInfo(regexEntCreateDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -95,12 +95,12 @@ export default class Regex_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetail} and HTTP response
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsWithHttpInfo(instanceName) {
+    regexEntityExtractorGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling regexEntityExtractorGetDetails");
       }
 
 
@@ -132,8 +132,8 @@ export default class Regex_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetail}
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetails(instanceName) {
-      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsWithHttpInfo(instanceName)
+    regexEntityExtractorGetDetails(instanceName) {
+      return this.regexEntityExtractorGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -145,7 +145,7 @@ export default class Regex_entity_extractorsApi {
      * Get the list of loaded regular expression entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RegexInstanceDetailList} and HTTP response
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllWithHttpInfo() {
+    regexEntityExtractorGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -175,8 +175,8 @@ export default class Regex_entity_extractorsApi {
      * Get the list of loaded regular expression entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RegexInstanceDetailList}
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAll() {
-      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorGetDetailsAllWithHttpInfo()
+    regexEntityExtractorGetDetailsAll() {
+      return this.regexEntityExtractorGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -190,17 +190,17 @@ export default class Regex_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
+    regexEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling regexEntityExtractorRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling regexEntityExtractorRetrieve");
       }
 
 
@@ -233,8 +233,8 @@ export default class Regex_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
      */
-    controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieve(instanceName, textInput) {
-      return this.controllersRegexEntityExtractorsControllerRegexEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+    regexEntityExtractorRetrieve(instanceName, textInput) {
+      return this.regexEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

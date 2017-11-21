@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(FeersumNluApi.WordAndDistance);
     });
 
-    it('should have the property distance (base name: "distance")', function() {
-      // uncomment below and update the code to test the property distance
+    it('should have the property word (base name: "word")', function() {
+      // uncomment below and update the code to test the property word
       //var instane = new FeersumNluApi.WordAndDistance();
       //expect(instance).to.be();
     });
 
-    it('should have the property word (base name: "word")', function() {
-      // uncomment below and update the code to test the property word
+    it('should have the property distance (base name: "distance")', function() {
+      // uncomment below and update the code to test the property distance
       //var instane = new FeersumNluApi.WordAndDistance();
       //expect(instance).to.be();
     });

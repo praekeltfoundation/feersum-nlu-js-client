@@ -30,17 +30,17 @@ export default class InstanceDetail {
     * The model instance detail.
     * @alias module:model/InstanceDetail
     * @class
-    * @param id {String} The unique id of a specific version of the model instance.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param id {String} The unique id of a specific version of the model instance.
     */
 
-    constructor(id, name) {
+    constructor(name, id) {
         
 
         
         
 
-        this['id'] = id;this['name'] = name;
+        this['name'] = name;this['id'] = id;
 
         
     }
@@ -60,82 +60,82 @@ export default class InstanceDetail {
             
             
 
-            if (data.hasOwnProperty('cm_labels')) {
-                obj['cm_labels'] = ApiClient.convertToType(data['cm_labels'], Object);
-            }
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('threshold')) {
-                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
             if (data.hasOwnProperty('training_accuracy')) {
                 obj['training_accuracy'] = ApiClient.convertToType(data['training_accuracy'], 'Number');
             }
-            if (data.hasOwnProperty('training_cm')) {
-                obj['training_cm'] = ApiClient.convertToType(data['training_cm'], Object);
-            }
             if (data.hasOwnProperty('training_stamp')) {
                 obj['training_stamp'] = ApiClient.convertToType(data['training_stamp'], 'String');
             }
+            if (data.hasOwnProperty('training_cm')) {
+                obj['training_cm'] = ApiClient.convertToType(data['training_cm'], Object);
+            }
+            if (data.hasOwnProperty('cm_labels')) {
+                obj['cm_labels'] = ApiClient.convertToType(data['cm_labels'], Object);
+            }
             if (data.hasOwnProperty('word_manifold_list')) {
                 obj['word_manifold_list'] = ApiClient.convertToType(data['word_manifold_list'], [LabeledWordManifold]);
+            }
+            if (data.hasOwnProperty('threshold')) {
+                obj['threshold'] = ApiClient.convertToType(data['threshold'], 'Number');
             }
         }
         return obj;
     }
 
     /**
-    * A dict that, if present, maps from the confusion matrix row and column labels to longer more descriptive labels. For example, if present it maps an FAQ answer ID to the string answer which may be either a label or the full text answer.
-    * @member {Object} cm_labels
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
     */
-    cm_labels = undefined;
-    /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
-    */
-    desc = undefined;
+    name = undefined;
     /**
     * The unique id of a specific version of the model instance.
     * @member {String} id
     */
     id = undefined;
     /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
     */
-    name = undefined;
-    /**
-    * There is typically some model dependent threshold to be set upon training and which is possibly mutable post training. This is that threshold.
-    * @member {Number} threshold
-    */
-    threshold = undefined;
+    desc = undefined;
     /**
     * The accuracy of the model as measured on the training set.
     * @member {Number} training_accuracy
     */
     training_accuracy = undefined;
     /**
-    * The confusion matrix as measured on the training set. The matrix is expected to be quite sparse so a compact dict of dicts representation is used.
-    * @member {Object} training_cm
-    */
-    training_cm = undefined;
-    /**
     * The time when the training operation concluded.
     * @member {String} training_stamp
     */
     training_stamp = undefined;
     /**
+    * The confusion matrix as measured on the training set. The matrix is expected to be quite sparse so a compact dict of dicts representation is used.
+    * @member {Object} training_cm
+    */
+    training_cm = undefined;
+    /**
+    * A dict that, if present, maps from the confusion matrix row and column labels to longer more descriptive labels. For example, if present it maps an FAQ answer ID to the string answer which may be either a label or the full text answer.
+    * @member {Object} cm_labels
+    */
+    cm_labels = undefined;
+    /**
     * The list of labelled word manifolds to use for training.
     * @member {Array.<module:model/LabeledWordManifold>} word_manifold_list
     */
     word_manifold_list = undefined;
+    /**
+    * There is typically some model dependent threshold to be set upon training and which is possibly mutable post training. This is that threshold.
+    * @member {Number} threshold
+    */
+    threshold = undefined;
 
 
 

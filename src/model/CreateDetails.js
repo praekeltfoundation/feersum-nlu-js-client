@@ -29,17 +29,17 @@ export default class CreateDetails {
     * The details of the model instance to create.
     * @alias module:model/CreateDetails
     * @class
-    * @param loadFromStore {Boolean} Indicates if a pre-existing model with the specified name should be loaded from the model store. Usually set to False in which case a new model is created with details as specified.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param loadFromStore {Boolean} Indicates if a pre-existing model with the specified name should be loaded from the model store. Usually set to False in which case a new model is created with details as specified.
     */
 
-    constructor(loadFromStore, name) {
+    constructor(name, loadFromStore) {
         
 
         
         
 
-        this['load_from_store'] = loadFromStore;this['name'] = name;
+        this['name'] = name;this['load_from_store'] = loadFromStore;
 
         
     }
@@ -59,6 +59,9 @@ export default class CreateDetails {
             
             
 
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('desc')) {
                 obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
@@ -68,13 +71,15 @@ export default class CreateDetails {
             if (data.hasOwnProperty('load_from_store')) {
                 obj['load_from_store'] = ApiClient.convertToType(data['load_from_store'], 'Boolean');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
         }
         return obj;
     }
 
+    /**
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
+    */
+    name = undefined;
     /**
     * The longer existential description of this instance's purpose in life.
     * @member {String} desc
@@ -90,11 +95,6 @@ export default class CreateDetails {
     * @member {Boolean} load_from_store
     */
     load_from_store = undefined;
-    /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
-    */
-    name = undefined;
 
 
 

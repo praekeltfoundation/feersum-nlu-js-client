@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(FeersumNluApi.RegexInstanceDetail);
     });
 
-    it('should have the property desc (base name: "desc")', function() {
-      // uncomment below and update the code to test the property desc
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new FeersumNluApi.RegexInstanceDetail();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property desc (base name: "desc")', function() {
+      // uncomment below and update the code to test the property desc
       //var instane = new FeersumNluApi.RegexInstanceDetail();
       //expect(instance).to.be();
     });

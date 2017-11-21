@@ -47,17 +47,17 @@ export default class Word_manifoldsApi {
      * @param {module:model/NewWordList} newWordList List of new words.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersWordManifoldsControllerWordManifoldAddSimilarWordsWithHttpInfo(instanceName, newWordList) {
+    wordManifoldAddSimilarWordsWithHttpInfo(instanceName, newWordList) {
       let postBody = newWordList;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersWordManifoldsControllerWordManifoldAddSimilarWords");
+        throw new Error("Missing the required parameter 'instanceName' when calling wordManifoldAddSimilarWords");
       }
 
       // verify the required parameter 'newWordList' is set
       if (newWordList === undefined || newWordList === null) {
-        throw new Error("Missing the required parameter 'newWordList' when calling controllersWordManifoldsControllerWordManifoldAddSimilarWords");
+        throw new Error("Missing the required parameter 'newWordList' when calling wordManifoldAddSimilarWords");
       }
 
 
@@ -90,8 +90,8 @@ export default class Word_manifoldsApi {
      * @param {module:model/NewWordList} newWordList List of new words.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersWordManifoldsControllerWordManifoldAddSimilarWords(instanceName, newWordList) {
-      return this.controllersWordManifoldsControllerWordManifoldAddSimilarWordsWithHttpInfo(instanceName, newWordList)
+    wordManifoldAddSimilarWords(instanceName, newWordList) {
+      return this.wordManifoldAddSimilarWordsWithHttpInfo(instanceName, newWordList)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -104,12 +104,12 @@ export default class Word_manifoldsApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstanceDetail} and HTTP response
      */
-    controllersWordManifoldsControllerWordManifoldCreateWithHttpInfo(createDetails) {
+    wordManifoldCreateWithHttpInfo(createDetails) {
       let postBody = createDetails;
 
       // verify the required parameter 'createDetails' is set
       if (createDetails === undefined || createDetails === null) {
-        throw new Error("Missing the required parameter 'createDetails' when calling controllersWordManifoldsControllerWordManifoldCreate");
+        throw new Error("Missing the required parameter 'createDetails' when calling wordManifoldCreate");
       }
 
 
@@ -140,8 +140,8 @@ export default class Word_manifoldsApi {
      * @param {module:model/CreateDetails} createDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstanceDetail}
      */
-    controllersWordManifoldsControllerWordManifoldCreate(createDetails) {
-      return this.controllersWordManifoldsControllerWordManifoldCreateWithHttpInfo(createDetails)
+    wordManifoldCreate(createDetails) {
+      return this.wordManifoldCreateWithHttpInfo(createDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -155,17 +155,17 @@ export default class Word_manifoldsApi {
      * @param {module:model/WordAndThreshold} wordAndThreshold A word token and an accompanying threshold.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WordAndDistanceList} and HTTP response
      */
-    controllersWordManifoldsControllerWordManifoldGetSimilarWordsWithHttpInfo(instanceName, wordAndThreshold) {
+    wordManifoldGetSimilarWordsWithHttpInfo(instanceName, wordAndThreshold) {
       let postBody = wordAndThreshold;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersWordManifoldsControllerWordManifoldGetSimilarWords");
+        throw new Error("Missing the required parameter 'instanceName' when calling wordManifoldGetSimilarWords");
       }
 
       // verify the required parameter 'wordAndThreshold' is set
       if (wordAndThreshold === undefined || wordAndThreshold === null) {
-        throw new Error("Missing the required parameter 'wordAndThreshold' when calling controllersWordManifoldsControllerWordManifoldGetSimilarWords");
+        throw new Error("Missing the required parameter 'wordAndThreshold' when calling wordManifoldGetSimilarWords");
       }
 
 
@@ -198,8 +198,8 @@ export default class Word_manifoldsApi {
      * @param {module:model/WordAndThreshold} wordAndThreshold A word token and an accompanying threshold.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WordAndDistanceList}
      */
-    controllersWordManifoldsControllerWordManifoldGetSimilarWords(instanceName, wordAndThreshold) {
-      return this.controllersWordManifoldsControllerWordManifoldGetSimilarWordsWithHttpInfo(instanceName, wordAndThreshold)
+    wordManifoldGetSimilarWords(instanceName, wordAndThreshold) {
+      return this.wordManifoldGetSimilarWordsWithHttpInfo(instanceName, wordAndThreshold)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -213,17 +213,17 @@ export default class Word_manifoldsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WordAndDistanceList} and HTTP response
      */
-    controllersWordManifoldsControllerWordManifoldSpellCorrectWithHttpInfo(instanceName, textInput) {
+    wordManifoldSpellCorrectWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersWordManifoldsControllerWordManifoldSpellCorrect");
+        throw new Error("Missing the required parameter 'instanceName' when calling wordManifoldSpellCorrect");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersWordManifoldsControllerWordManifoldSpellCorrect");
+        throw new Error("Missing the required parameter 'textInput' when calling wordManifoldSpellCorrect");
       }
 
 
@@ -256,8 +256,8 @@ export default class Word_manifoldsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WordAndDistanceList}
      */
-    controllersWordManifoldsControllerWordManifoldSpellCorrect(instanceName, textInput) {
-      return this.controllersWordManifoldsControllerWordManifoldSpellCorrectWithHttpInfo(instanceName, textInput)
+    wordManifoldSpellCorrect(instanceName, textInput) {
+      return this.wordManifoldSpellCorrectWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

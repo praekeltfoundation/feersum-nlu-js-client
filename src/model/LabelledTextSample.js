@@ -29,17 +29,17 @@ export default class LabelledTextSample {
     * Labelled text sample.
     * @alias module:model/LabelledTextSample
     * @class
-    * @param label {String} 
     * @param text {String} 
+    * @param label {String} 
     */
 
-    constructor(label, text) {
+    constructor(text, label) {
         
 
         
         
 
-        this['label'] = label;this['text'] = text;
+        this['text'] = text;this['label'] = label;
 
         
     }
@@ -59,24 +59,24 @@ export default class LabelledTextSample {
             
             
 
-            if (data.hasOwnProperty('label')) {
-                obj['label'] = ApiClient.convertToType(data['label'], 'String');
-            }
             if (data.hasOwnProperty('text')) {
                 obj['text'] = ApiClient.convertToType(data['text'], 'String');
+            }
+            if (data.hasOwnProperty('label')) {
+                obj['label'] = ApiClient.convertToType(data['label'], 'String');
             }
         }
         return obj;
     }
 
     /**
-    * @member {String} label
-    */
-    label = undefined;
-    /**
     * @member {String} text
     */
     text = undefined;
+    /**
+    * @member {String} label
+    */
+    label = undefined;
 
 
 

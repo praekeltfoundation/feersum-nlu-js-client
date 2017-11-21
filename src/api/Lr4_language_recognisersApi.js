@@ -46,12 +46,12 @@ export default class Lr4_language_recognisersApi {
      * @param {module:model/Lr4CreateDetails} lr4CreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetail} and HTTP response
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateWithHttpInfo(lr4CreateDetails) {
+    lr4LanguageRecogniserCreateWithHttpInfo(lr4CreateDetails) {
       let postBody = lr4CreateDetails;
 
       // verify the required parameter 'lr4CreateDetails' is set
       if (lr4CreateDetails === undefined || lr4CreateDetails === null) {
-        throw new Error("Missing the required parameter 'lr4CreateDetails' when calling controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate");
+        throw new Error("Missing the required parameter 'lr4CreateDetails' when calling lr4LanguageRecogniserCreate");
       }
 
 
@@ -82,8 +82,8 @@ export default class Lr4_language_recognisersApi {
      * @param {module:model/Lr4CreateDetails} lr4CreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetail}
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreate(lr4CreateDetails) {
-      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserCreateWithHttpInfo(lr4CreateDetails)
+    lr4LanguageRecogniserCreate(lr4CreateDetails) {
+      return this.lr4LanguageRecogniserCreateWithHttpInfo(lr4CreateDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -96,12 +96,12 @@ export default class Lr4_language_recognisersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetail} and HTTP response
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsWithHttpInfo(instanceName) {
+    lr4LanguageRecogniserGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling lr4LanguageRecogniserGetDetails");
       }
 
 
@@ -133,8 +133,8 @@ export default class Lr4_language_recognisersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetail}
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetails(instanceName) {
-      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsWithHttpInfo(instanceName)
+    lr4LanguageRecogniserGetDetails(instanceName) {
+      return this.lr4LanguageRecogniserGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -146,7 +146,7 @@ export default class Lr4_language_recognisersApi {
      * Get the list of loaded LR4 text language detectors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lr4InstanceDetailList} and HTTP response
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllWithHttpInfo() {
+    lr4LanguageRecogniserGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -176,8 +176,8 @@ export default class Lr4_language_recognisersApi {
      * Get the list of loaded LR4 text language detectors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lr4InstanceDetailList}
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAll() {
-      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetDetailsAllWithHttpInfo()
+    lr4LanguageRecogniserGetDetailsAll() {
+      return this.lr4LanguageRecogniserGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -190,12 +190,12 @@ export default class Lr4_language_recognisersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ClassLabelList} and HTTP response
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsWithHttpInfo(instanceName) {
+    lr4LanguageRecogniserGetLabelsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels");
+        throw new Error("Missing the required parameter 'instanceName' when calling lr4LanguageRecogniserGetLabels");
       }
 
 
@@ -227,8 +227,8 @@ export default class Lr4_language_recognisersApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ClassLabelList}
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabels(instanceName) {
-      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserGetLabelsWithHttpInfo(instanceName)
+    lr4LanguageRecogniserGetLabels(instanceName) {
+      return this.lr4LanguageRecogniserGetLabelsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -242,17 +242,17 @@ export default class Lr4_language_recognisersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ScoredLabelList} and HTTP response
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveWithHttpInfo(instanceName, textInput) {
+    lr4LanguageRecogniserRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling lr4LanguageRecogniserRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling lr4LanguageRecogniserRetrieve");
       }
 
 
@@ -285,8 +285,8 @@ export default class Lr4_language_recognisersApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ScoredLabelList}
      */
-    controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieve(instanceName, textInput) {
-      return this.controllersLr4LanguageRecognisersControllerLr4LanguageRecogniserRetrieveWithHttpInfo(instanceName, textInput)
+    lr4LanguageRecogniserRetrieve(instanceName, textInput) {
+      return this.lr4LanguageRecogniserRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(FeersumNluApi.ClassLabelPair);
     });
 
-    it('should have the property matrixName (base name: "matrix_name")', function() {
-      // uncomment below and update the code to test the property matrixName
+    it('should have the property trueLabel (base name: "true_label")', function() {
+      // uncomment below and update the code to test the property trueLabel
       //var instane = new FeersumNluApi.ClassLabelPair();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property trueLabel (base name: "true_label")', function() {
-      // uncomment below and update the code to test the property trueLabel
+    it('should have the property matrixName (base name: "matrix_name")', function() {
+      // uncomment below and update the code to test the property matrixName
       //var instane = new FeersumNluApi.ClassLabelPair();
       //expect(instance).to.be();
     });

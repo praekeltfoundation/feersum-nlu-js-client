@@ -29,18 +29,18 @@ export default class RegexInstanceDetail {
     * The model instance detail.
     * @alias module:model/RegexInstanceDetail
     * @class
-    * @param id {String} The unique id of a specific version of the model instance.
     * @param name {String} The sluggy-url-friendly-name of the instance.
+    * @param id {String} The unique id of a specific version of the model instance.
     * @param regex {String} The regular expression i.e. '(?P<license>([A-Z]{3}[ ]?[0-9]{3}[ ]?(GP|NW|MP|EC|L|NC|NW)))'
     */
 
-    constructor(id, name, regex) {
+    constructor(name, id, regex) {
         
 
         
         
 
-        this['id'] = id;this['name'] = name;this['regex'] = regex;
+        this['name'] = name;this['id'] = id;this['regex'] = regex;
 
         
     }
@@ -60,14 +60,14 @@ export default class RegexInstanceDetail {
             
             
 
-            if (data.hasOwnProperty('desc')) {
-                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('desc')) {
+                obj['desc'] = ApiClient.convertToType(data['desc'], 'String');
             }
             if (data.hasOwnProperty('regex')) {
                 obj['regex'] = ApiClient.convertToType(data['regex'], 'String');
@@ -77,20 +77,20 @@ export default class RegexInstanceDetail {
     }
 
     /**
-    * The longer existential description of this instance's purpose in life.
-    * @member {String} desc
+    * The sluggy-url-friendly-name of the instance.
+    * @member {String} name
     */
-    desc = undefined;
+    name = undefined;
     /**
     * The unique id of a specific version of the model instance.
     * @member {String} id
     */
     id = undefined;
     /**
-    * The sluggy-url-friendly-name of the instance.
-    * @member {String} name
+    * The longer existential description of this instance's purpose in life.
+    * @member {String} desc
     */
-    name = undefined;
+    desc = undefined;
     /**
     * The regular expression i.e. '(?P<license>([A-Z]{3}[ ]?[0-9]{3}[ ]?(GP|NW|MP|EC|L|NC|NW)))'
     * @member {String} regex

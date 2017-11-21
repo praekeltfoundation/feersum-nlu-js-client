@@ -45,12 +45,12 @@ export default class Duckling_entity_extractorsApi {
      * @param {module:model/DucklingEntCreateDetails} ducklingEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetail} and HTTP response
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateWithHttpInfo(ducklingEntCreateDetails) {
+    ducklingEntityExtractorCreateWithHttpInfo(ducklingEntCreateDetails) {
       let postBody = ducklingEntCreateDetails;
 
       // verify the required parameter 'ducklingEntCreateDetails' is set
       if (ducklingEntCreateDetails === undefined || ducklingEntCreateDetails === null) {
-        throw new Error("Missing the required parameter 'ducklingEntCreateDetails' when calling controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate");
+        throw new Error("Missing the required parameter 'ducklingEntCreateDetails' when calling ducklingEntityExtractorCreate");
       }
 
 
@@ -81,8 +81,8 @@ export default class Duckling_entity_extractorsApi {
      * @param {module:model/DucklingEntCreateDetails} ducklingEntCreateDetails The details of the instance to create.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetail}
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(ducklingEntCreateDetails) {
-      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreateWithHttpInfo(ducklingEntCreateDetails)
+    ducklingEntityExtractorCreate(ducklingEntCreateDetails) {
+      return this.ducklingEntityExtractorCreateWithHttpInfo(ducklingEntCreateDetails)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -95,12 +95,12 @@ export default class Duckling_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetail} and HTTP response
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsWithHttpInfo(instanceName) {
+    ducklingEntityExtractorGetDetailsWithHttpInfo(instanceName) {
       let postBody = null;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails");
+        throw new Error("Missing the required parameter 'instanceName' when calling ducklingEntityExtractorGetDetails");
       }
 
 
@@ -132,8 +132,8 @@ export default class Duckling_entity_extractorsApi {
      * @param {String} instanceName The name of the model instance.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetail}
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(instanceName) {
-      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsWithHttpInfo(instanceName)
+    ducklingEntityExtractorGetDetails(instanceName) {
+      return this.ducklingEntityExtractorGetDetailsWithHttpInfo(instanceName)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -145,7 +145,7 @@ export default class Duckling_entity_extractorsApi {
      * Get the list of loaded duckling entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DucklingInstanceDetailList} and HTTP response
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllWithHttpInfo() {
+    ducklingEntityExtractorGetDetailsAllWithHttpInfo() {
       let postBody = null;
 
 
@@ -175,8 +175,8 @@ export default class Duckling_entity_extractorsApi {
      * Get the list of loaded duckling entity extractors.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DucklingInstanceDetailList}
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll() {
-      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAllWithHttpInfo()
+    ducklingEntityExtractorGetDetailsAll() {
+      return this.ducklingEntityExtractorGetDetailsAllWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -190,17 +190,17 @@ export default class Duckling_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntityList} and HTTP response
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
+    ducklingEntityExtractorRetrieveWithHttpInfo(instanceName, textInput) {
       let postBody = textInput;
 
       // verify the required parameter 'instanceName' is set
       if (instanceName === undefined || instanceName === null) {
-        throw new Error("Missing the required parameter 'instanceName' when calling controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'instanceName' when calling ducklingEntityExtractorRetrieve");
       }
 
       // verify the required parameter 'textInput' is set
       if (textInput === undefined || textInput === null) {
-        throw new Error("Missing the required parameter 'textInput' when calling controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve");
+        throw new Error("Missing the required parameter 'textInput' when calling ducklingEntityExtractorRetrieve");
       }
 
 
@@ -233,8 +233,8 @@ export default class Duckling_entity_extractorsApi {
      * @param {module:model/TextInput} textInput The input text.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntityList}
      */
-    controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(instanceName, textInput) {
-      return this.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
+    ducklingEntityExtractorRetrieve(instanceName, textInput) {
+      return this.ducklingEntityExtractorRetrieveWithHttpInfo(instanceName, textInput)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

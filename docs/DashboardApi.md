@@ -4,12 +4,12 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersDashboardControllerDashboardGetDetails**](DashboardApi.md#controllersDashboardControllerDashboardGetDetails) | **GET** /dashboard | Your service dashboard.
+[**dashboardGetDetails**](DashboardApi.md#dashboardGetDetails) | **GET** /dashboard | Your service dashboard.
 
 
-<a name="controllersDashboardControllerDashboardGetDetails"></a>
-# **controllersDashboardControllerDashboardGetDetails**
-> DashboardDetail controllersDashboardControllerDashboardGetDetails()
+<a name="dashboardGetDetails"></a>
+# **dashboardGetDetails**
+> DashboardDetail dashboardGetDetails()
 
 Your service dashboard.
 
@@ -27,7 +27,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.DashboardApi();
-apiInstance.controllersDashboardControllerDashboardGetDetails().then((data) => {
+apiInstance.dashboardGetDetails().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

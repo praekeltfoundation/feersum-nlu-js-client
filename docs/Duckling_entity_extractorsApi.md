@@ -4,15 +4,15 @@ All URIs are relative to *https://nlu.playground.feersum.io:443/nlu/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate**](Duckling_entity_extractorsApi.md#controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate) | **POST** /duckling_entity_extractors | Create a duckling entity extractor.
-[**controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails**](Duckling_entity_extractorsApi.md#controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails) | **GET** /duckling_entity_extractors/{instance_name} | Get details of named instance.
-[**controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll**](Duckling_entity_extractorsApi.md#controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll) | **GET** /duckling_entity_extractors | Get list of loaded regular expression entity extractors.
-[**controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve**](Duckling_entity_extractorsApi.md#controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve) | **POST** /duckling_entity_extractors/{instance_name}/retrieve | Extract information based on the regular expression.
+[**ducklingEntityExtractorCreate**](Duckling_entity_extractorsApi.md#ducklingEntityExtractorCreate) | **POST** /duckling_entity_extractors | Create a duckling entity extractor.
+[**ducklingEntityExtractorGetDetails**](Duckling_entity_extractorsApi.md#ducklingEntityExtractorGetDetails) | **GET** /duckling_entity_extractors/{instance_name} | Get details of named instance.
+[**ducklingEntityExtractorGetDetailsAll**](Duckling_entity_extractorsApi.md#ducklingEntityExtractorGetDetailsAll) | **GET** /duckling_entity_extractors | Get list of loaded regular expression entity extractors.
+[**ducklingEntityExtractorRetrieve**](Duckling_entity_extractorsApi.md#ducklingEntityExtractorRetrieve) | **POST** /duckling_entity_extractors/{instance_name}/retrieve | Extract information based on the regular expression.
 
 
-<a name="controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate"></a>
-# **controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate**
-> DucklingInstanceDetail controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(ducklingEntCreateDetails)
+<a name="ducklingEntityExtractorCreate"></a>
+# **ducklingEntityExtractorCreate**
+> DucklingInstanceDetail ducklingEntityExtractorCreate(ducklingEntCreateDetails)
 
 Create a duckling entity extractor.
 
@@ -33,7 +33,7 @@ let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
 let ducklingEntCreateDetails = new FeersumNluApi.DucklingEntCreateDetails(); // DucklingEntCreateDetails | The details of the instance to create.
 
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorCreate(ducklingEntCreateDetails).then((data) => {
+apiInstance.ducklingEntityExtractorCreate(ducklingEntCreateDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails"></a>
-# **controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails**
-> DucklingInstanceDetail controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(instanceName)
+<a name="ducklingEntityExtractorGetDetails"></a>
+# **ducklingEntityExtractorGetDetails**
+> DucklingInstanceDetail ducklingEntityExtractorGetDetails(instanceName)
 
 Get details of named instance.
 
@@ -83,7 +83,7 @@ let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
 let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetails(instanceName).then((data) => {
+apiInstance.ducklingEntityExtractorGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -110,9 +110,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll"></a>
-# **controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll**
-> DucklingInstanceDetailList controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll()
+<a name="ducklingEntityExtractorGetDetailsAll"></a>
+# **ducklingEntityExtractorGetDetailsAll**
+> DucklingInstanceDetailList ducklingEntityExtractorGetDetailsAll()
 
 Get list of loaded regular expression entity extractors.
 
@@ -130,7 +130,7 @@ APIKeyHeader.apiKey = 'YOUR API KEY';
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
 let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorGetDetailsAll().then((data) => {
+apiInstance.ducklingEntityExtractorGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -154,9 +154,9 @@ This endpoint does not need any parameter.
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve"></a>
-# **controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve**
-> EntityList controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(instanceName, textInput)
+<a name="ducklingEntityExtractorRetrieve"></a>
+# **ducklingEntityExtractorRetrieve**
+> EntityList ducklingEntityExtractorRetrieve(instanceName, textInput)
 
 Extract information based on the regular expression.
 
@@ -179,7 +179,7 @@ let instanceName = "instanceName_example"; // String | The name of the model ins
 
 let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersDucklingEntityExtractorsControllerDucklingEntityExtractorRetrieve(instanceName, textInput).then((data) => {
+apiInstance.ducklingEntityExtractorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -54,14 +54,8 @@
       //expect(instance).to.be.a(FeersumNluApi.InstanceDetail);
     });
 
-    it('should have the property cmLabels (base name: "cm_labels")', function() {
-      // uncomment below and update the code to test the property cmLabels
-      //var instane = new FeersumNluApi.InstanceDetail();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property desc (base name: "desc")', function() {
-      // uncomment below and update the code to test the property desc
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new FeersumNluApi.InstanceDetail();
       //expect(instance).to.be();
     });
@@ -72,14 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new FeersumNluApi.InstanceDetail();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property threshold (base name: "threshold")', function() {
-      // uncomment below and update the code to test the property threshold
+    it('should have the property desc (base name: "desc")', function() {
+      // uncomment below and update the code to test the property desc
       //var instane = new FeersumNluApi.InstanceDetail();
       //expect(instance).to.be();
     });
@@ -90,20 +78,32 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property trainingCm (base name: "training_cm")', function() {
-      // uncomment below and update the code to test the property trainingCm
-      //var instane = new FeersumNluApi.InstanceDetail();
-      //expect(instance).to.be();
-    });
-
     it('should have the property trainingStamp (base name: "training_stamp")', function() {
       // uncomment below and update the code to test the property trainingStamp
       //var instane = new FeersumNluApi.InstanceDetail();
       //expect(instance).to.be();
     });
 
+    it('should have the property trainingCm (base name: "training_cm")', function() {
+      // uncomment below and update the code to test the property trainingCm
+      //var instane = new FeersumNluApi.InstanceDetail();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cmLabels (base name: "cm_labels")', function() {
+      // uncomment below and update the code to test the property cmLabels
+      //var instane = new FeersumNluApi.InstanceDetail();
+      //expect(instance).to.be();
+    });
+
     it('should have the property wordManifoldList (base name: "word_manifold_list")', function() {
       // uncomment below and update the code to test the property wordManifoldList
+      //var instane = new FeersumNluApi.InstanceDetail();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property threshold (base name: "threshold")', function() {
+      // uncomment below and update the code to test the property threshold
       //var instane = new FeersumNluApi.InstanceDetail();
       //expect(instance).to.be();
     });

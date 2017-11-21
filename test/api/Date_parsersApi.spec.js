@@ -48,10 +48,10 @@
   }
 
   describe('Date_parsersApi', function() {
-    describe('controllersDateParsersControllerDateParserRetrieve', function() {
-      it('should call controllersDateParsersControllerDateParserRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersDateParsersControllerDateParserRetrieve
-        //instance.controllersDateParsersControllerDateParserRetrieve(function(error) {
+    describe('dateParserRetrieve', function() {
+      it('should call dateParserRetrieve successfully', function(done) {
+        //uncomment below and update the code to test dateParserRetrieve
+        //instance.dateParserRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

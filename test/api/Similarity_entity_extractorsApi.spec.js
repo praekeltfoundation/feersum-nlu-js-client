@@ -48,40 +48,40 @@
   }
 
   describe('Similarity_entity_extractorsApi', function() {
-    describe('controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate', function() {
-      it('should call controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate successfully', function(done) {
-        //uncomment below and update the code to test controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate
-        //instance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(function(error) {
+    describe('similarityEntityExtractorCreate', function() {
+      it('should call similarityEntityExtractorCreate successfully', function(done) {
+        //uncomment below and update the code to test similarityEntityExtractorCreate
+        //instance.similarityEntityExtractorCreate(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails', function() {
-      it('should call controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails successfully', function(done) {
-        //uncomment below and update the code to test controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails
-        //instance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(function(error) {
+    describe('similarityEntityExtractorGetDetails', function() {
+      it('should call similarityEntityExtractorGetDetails successfully', function(done) {
+        //uncomment below and update the code to test similarityEntityExtractorGetDetails
+        //instance.similarityEntityExtractorGetDetails(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll', function() {
-      it('should call controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll successfully', function(done) {
-        //uncomment below and update the code to test controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll
-        //instance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll(function(error) {
+    describe('similarityEntityExtractorGetDetailsAll', function() {
+      it('should call similarityEntityExtractorGetDetailsAll successfully', function(done) {
+        //uncomment below and update the code to test similarityEntityExtractorGetDetailsAll
+        //instance.similarityEntityExtractorGetDetailsAll(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve', function() {
-      it('should call controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve successfully', function(done) {
-        //uncomment below and update the code to test controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve
-        //instance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(function(error) {
+    describe('similarityEntityExtractorRetrieve', function() {
+      it('should call similarityEntityExtractorRetrieve successfully', function(done) {
+        //uncomment below and update the code to test similarityEntityExtractorRetrieve
+        //instance.similarityEntityExtractorRetrieve(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
