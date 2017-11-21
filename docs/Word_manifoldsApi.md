@@ -20,24 +20,24 @@ Add new words to the manifold that are similar to existing words and save the ma
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Word_manifoldsApi();
+var apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let newWordList = new FeersumNluApi.NewWordList(); // NewWordList | List of new words.
+var newWordList = new FeersumNluApi.NewWordList(); // NewWordList | List of new words.
 
-apiInstance.wordManifoldAddSimilarWords(instanceName, newWordList).then((data) => {
+apiInstance.wordManifoldAddSimilarWords(instanceName, newWordList).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -73,22 +73,22 @@ Create a new word manifold model using an input file or load a model from the st
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Word_manifoldsApi();
+var apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
-let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
+var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.wordManifoldCreate(createDetails).then((data) => {
+apiInstance.wordManifoldCreate(createDetails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -123,24 +123,24 @@ Returns words from the manifold that are similar to the parameter word.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Word_manifoldsApi();
+var apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let wordAndThreshold = new FeersumNluApi.WordAndThreshold(); // WordAndThreshold | A word token and an accompanying threshold.
+var wordAndThreshold = new FeersumNluApi.WordAndThreshold(); // WordAndThreshold | A word token and an accompanying threshold.
 
-apiInstance.wordManifoldGetSimilarWords(instanceName, wordAndThreshold).then((data) => {
+apiInstance.wordManifoldGetSimilarWords(instanceName, wordAndThreshold).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -176,24 +176,24 @@ Spell correct a word replacing it with the most likely word from the manifold. R
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Word_manifoldsApi();
+var apiInstance = new FeersumNluApi.Word_manifoldsApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.wordManifoldSpellCorrect(instanceName, textInput).then((data) => {
+apiInstance.wordManifoldSpellCorrect(instanceName, textInput).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

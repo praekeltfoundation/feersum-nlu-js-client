@@ -17,24 +17,24 @@ Parses one or more dates from text.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Date_parsersApi();
+var apiInstance = new FeersumNluApi.Date_parsersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.dateParserRetrieve(instanceName, textInput).then((data) => {
+apiInstance.dateParserRetrieve(instanceName, textInput).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

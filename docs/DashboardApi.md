@@ -17,19 +17,19 @@ Get your list of loaded model instances, the total API hits for each, API versio
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.DashboardApi();
-apiInstance.dashboardGetDetails().then((data) => {
+var apiInstance = new FeersumNluApi.DashboardApi();
+apiInstance.dashboardGetDetails().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

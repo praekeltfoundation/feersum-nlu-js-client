@@ -27,24 +27,24 @@ Add training samples to named intent classifier. Returns the classifier&#39;s up
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
+var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.intentClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.intentClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -80,22 +80,22 @@ Create a new intent classifier or load one from the store. Returns the details o
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
+var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.intentClassifierCreate(createDetails).then((data) => {
+apiInstance.intentClassifierCreate(createDetails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -130,24 +130,24 @@ Returns the list of samples behind a cell of the confusion matrix of the trainin
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
+var labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.intentClassifierCurate(instanceName, labelPair).then((data) => {
+apiInstance.intentClassifierCurate(instanceName, labelPair).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -183,22 +183,22 @@ Delete the training samples of the named intent classifier. Returns the deleted 
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.intentClassifierDelTrainingSamples(instanceName).then((data) => {
+apiInstance.intentClassifierDelTrainingSamples(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -233,22 +233,22 @@ Returns the details of the named intent classifier instance.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.intentClassifierGetDetails(instanceName).then((data) => {
+apiInstance.intentClassifierGetDetails(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -283,19 +283,19 @@ Returns the list of loaded intent classifiers.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
-apiInstance.intentClassifierGetDetailsAll().then((data) => {
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
+apiInstance.intentClassifierGetDetailsAll().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -327,22 +327,22 @@ Returns the classifier&#39;s list of possible class labels.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.intentClassifierGetLabels(instanceName).then((data) => {
+apiInstance.intentClassifierGetLabels(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -377,22 +377,22 @@ Returns the training samples of the named intent classifier.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.intentClassifierGetTrainingSamples(instanceName).then((data) => {
+apiInstance.intentClassifierGetTrainingSamples(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -427,24 +427,24 @@ Train/update the classifier online with the samples provided. This operation is 
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
+var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.intentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
+apiInstance.intentClassifierOnlineTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -480,24 +480,24 @@ Classifies the intent and returns a probability sorted list of classes.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.intentClassifierRetrieve(instanceName, textInput).then((data) => {
+apiInstance.intentClassifierRetrieve(instanceName, textInput).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -533,24 +533,24 @@ Train the named intent classifier with the training and testing data already pro
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Intent_classifiersApi();
+var apiInstance = new FeersumNluApi.Intent_classifiersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
+var trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.intentClassifierTrain(instanceName, trainDetails).then((data) => {
+apiInstance.intentClassifierTrain(instanceName, trainDetails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

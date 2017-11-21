@@ -21,22 +21,22 @@ Create a new LR4 language detector from the pre-trained model name provided. &#3
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
-let lr4CreateDetails = new FeersumNluApi.Lr4CreateDetails(); // Lr4CreateDetails | The details of the instance to create.
+var lr4CreateDetails = new FeersumNluApi.Lr4CreateDetails(); // Lr4CreateDetails | The details of the instance to create.
 
-apiInstance.lr4LanguageRecogniserCreate(lr4CreateDetails).then((data) => {
+apiInstance.lr4LanguageRecogniserCreate(lr4CreateDetails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -71,22 +71,22 @@ Get the details of the named LR4 text language detector instance.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.lr4LanguageRecogniserGetDetails(instanceName).then((data) => {
+apiInstance.lr4LanguageRecogniserGetDetails(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -121,19 +121,19 @@ Get the list of loaded LR4 text language detectors.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
-apiInstance.lr4LanguageRecogniserGetDetailsAll().then((data) => {
+var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+apiInstance.lr4LanguageRecogniserGetDetailsAll().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -165,22 +165,22 @@ Returns the classifier&#39;s list of possible class labels.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.lr4LanguageRecogniserGetLabels(instanceName).then((data) => {
+apiInstance.lr4LanguageRecogniserGetLabels(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -215,24 +215,24 @@ Recognise the language the text is written in. Returns the list of scored langua
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
+var apiInstance = new FeersumNluApi.Lr4_language_recognisersApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.lr4LanguageRecogniserRetrieve(instanceName, textInput).then((data) => {
+apiInstance.lr4LanguageRecogniserRetrieve(instanceName, textInput).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

@@ -20,22 +20,22 @@ Create a new duckling entity extractor or load one from the store.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
+var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
-let ducklingEntCreateDetails = new FeersumNluApi.DucklingEntCreateDetails(); // DucklingEntCreateDetails | The details of the instance to create.
+var ducklingEntCreateDetails = new FeersumNluApi.DucklingEntCreateDetails(); // DucklingEntCreateDetails | The details of the instance to create.
 
-apiInstance.ducklingEntityExtractorCreate(ducklingEntCreateDetails).then((data) => {
+apiInstance.ducklingEntityExtractorCreate(ducklingEntCreateDetails).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -70,22 +70,22 @@ Get the details of the named duckling entity extractor instance.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
+var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.ducklingEntityExtractorGetDetails(instanceName).then((data) => {
+apiInstance.ducklingEntityExtractorGetDetails(instanceName).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -120,19 +120,19 @@ Get the list of loaded duckling entity extractors.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
-apiInstance.ducklingEntityExtractorGetDetailsAll().then((data) => {
+var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
+apiInstance.ducklingEntityExtractorGetDetailsAll().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -164,24 +164,24 @@ Extract the entities parsed by duckling.
 
 ### Example
 ```javascript
-import FeersumNluApi from 'feersum_nlu_api';
-let defaultClient = FeersumNluApi.ApiClient.instance;
+var FeersumNluApi = require('feersum_nlu_api');
+var defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-let apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
+var apiInstance = new FeersumNluApi.Duckling_entity_extractorsApi();
 
-let instanceName = "instanceName_example"; // String | The name of the model instance.
+var instanceName = "instanceName_example"; // String | The name of the model instance.
 
-let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.ducklingEntityExtractorRetrieve(instanceName, textInput).then((data) => {
+apiInstance.ducklingEntityExtractorRetrieve(instanceName, textInput).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
