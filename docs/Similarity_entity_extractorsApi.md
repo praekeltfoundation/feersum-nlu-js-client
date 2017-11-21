@@ -20,22 +20,22 @@ Create a new word similarity entity extractor or load one from the store.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
+let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
-var similarityEntCreateDetails = new FeersumNluApi.SimilarityEntCreateDetails(); // SimilarityEntCreateDetails | The details of the instance to create.
+let similarityEntCreateDetails = new FeersumNluApi.SimilarityEntCreateDetails(); // SimilarityEntCreateDetails | The details of the instance to create.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails).then(function(data) {
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorCreate(similarityEntCreateDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -70,22 +70,22 @@ Get the details of the named similarity entity extractor instance.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
+let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName).then(function(data) {
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -120,19 +120,19 @@ Get the list of loaded similarity entity extractors.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll().then(function(data) {
+let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -164,24 +164,24 @@ Extract the word entities that are similar to the list of words used to create t
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
+let apiInstance = new FeersumNluApi.Similarity_entity_extractorsApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput).then(function(data) {
+apiInstance.controllersSimilarityEntityExtractorsControllerSimilarityEntityExtractorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

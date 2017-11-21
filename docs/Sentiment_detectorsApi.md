@@ -17,24 +17,24 @@ Detect the general sentiment in the input text.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Sentiment_detectorsApi();
+let apiInstance = new FeersumNluApi.Sentiment_detectorsApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersSentimentDetectorsControllerSentimentDetectorRetrieve(instanceName, textInput).then(function(data) {
+apiInstance.controllersSentimentDetectorsControllerSentimentDetectorRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

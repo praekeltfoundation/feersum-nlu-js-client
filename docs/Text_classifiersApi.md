@@ -26,24 +26,24 @@ Add training samples to named text classifier. Returns the classifier&#39;s upda
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
+let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -79,22 +79,22 @@ Create a new text classifier or load one from the store. Returns the details of 
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
+let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierCreate(createDetails).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -129,24 +129,24 @@ Returns the list of samples behind a cell of the confusion matrix of the trainin
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
+let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierCurate(instanceName, labelPair).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierCurate(instanceName, labelPair).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -182,22 +182,22 @@ Delete the training samples of the named text classifier. Returns the deleted sa
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierDelTrainingSamples(instanceName).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierDelTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -232,22 +232,22 @@ Get the details of the named text classifier instance.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetDetails(instanceName).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -282,19 +282,19 @@ Get the list of loaded text classifiers.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
-apiInstance.controllersTextClassifiersControllerTextClassifierGetDetailsAll().then(function(data) {
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
+apiInstance.controllersTextClassifiersControllerTextClassifierGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -326,22 +326,22 @@ Returns the classifier&#39;s list of possible class labels.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetLabels(instanceName).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -376,22 +376,22 @@ Get the training samples of the named text classifier.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierGetTrainingSamples(instanceName).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierGetTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -426,24 +426,24 @@ Classifies the text and returns a probability sorted list of classes.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierRetrieve(instanceName, textInput).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -479,24 +479,24 @@ Train the named text classifier with the training and testing data already provi
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Text_classifiersApi();
+let apiInstance = new FeersumNluApi.Text_classifiersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
+let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.controllersTextClassifiersControllerTextClassifierTrain(instanceName, trainDetails).then(function(data) {
+apiInstance.controllersTextClassifiersControllerTextClassifierTrain(instanceName, trainDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

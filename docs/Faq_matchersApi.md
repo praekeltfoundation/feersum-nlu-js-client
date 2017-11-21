@@ -27,24 +27,24 @@ Add training samples to named faq matcher. Returns the FAQ matcher&#39;s updated
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
+let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherAddTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -80,22 +80,22 @@ Create a new faq matcher or load one from the store. Returns the details of the 
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
+let createDetails = new FeersumNluApi.CreateDetails(); // CreateDetails | The details of the instance to create.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherCreate(createDetails).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherCreate(createDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -130,24 +130,24 @@ Returns the list of samples behind a cell of the confusion matrix of the trainin
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
+let labelPair = new FeersumNluApi.ClassLabelPair(); // ClassLabelPair | The true label, predicted label and matrix (train/test) to use.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherCurate(instanceName, labelPair).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -183,22 +183,22 @@ Delete the training samples of the named FAQ matcher. Returns the deleted sample
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherDelTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -233,22 +233,22 @@ Get the details of the named FAQ matcher instance.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetails(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -283,19 +283,19 @@ Returns the list of loaded faq matchers.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll().then(function(data) {
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetDetailsAll().then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -327,22 +327,22 @@ Returns the classifier&#39;s list of possible class labels.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetLabels(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -377,22 +377,22 @@ Returns the training samples of the named faq matcher.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherGetTrainingSamples(instanceName).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -427,24 +427,24 @@ Train/update the classifier online with the samples provided. This operation is 
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
+let labelledTextSampleList = new FeersumNluApi.LabelledTextSampleList(); // LabelledTextSampleList | List of labelled text samples.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherOnlineTrainingSamples(instanceName, labelledTextSampleList).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -480,24 +480,24 @@ Matchers the FAQ and returns a probability sorted list of answer labels.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
+let textInput = new FeersumNluApi.TextInput(); // TextInput | The input text.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherRetrieve(instanceName, textInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -533,24 +533,24 @@ Train the named FAQ matcher with the training and testing data already provided.
 
 ### Example
 ```javascript
-var FeersumNluApi = require('feersum_nlu_api');
-var defaultClient = FeersumNluApi.ApiClient.instance;
+import FeersumNluApi from 'feersum_nlu_api';
+let defaultClient = FeersumNluApi.ApiClient.instance;
 
 // Configure API key authorization: APIKeyHeader
-var APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
+let APIKeyHeader = defaultClient.authentications['APIKeyHeader'];
 APIKeyHeader.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //APIKeyHeader.apiKeyPrefix = 'Token';
 
-var apiInstance = new FeersumNluApi.Faq_matchersApi();
+let apiInstance = new FeersumNluApi.Faq_matchersApi();
 
-var instanceName = "instanceName_example"; // String | The name of the model instance.
+let instanceName = "instanceName_example"; // String | The name of the model instance.
 
-var trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
+let trainDetails = new FeersumNluApi.TrainDetails(); // TrainDetails | The arguments provided to the train operation.
 
-apiInstance.controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails).then(function(data) {
+apiInstance.controllersFaqMatchersControllerFaqMatcherTrain(instanceName, trainDetails).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 

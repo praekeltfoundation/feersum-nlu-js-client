@@ -6,7 +6,7 @@ GENERATE_RESPONSE_JSON=$(curl -X POST -H "content-type:application/json" -d '{
     "spec": {},
     "options": {
         "usePromises": true,
-        "useES6": false
+        "useES6": true
     },
     "swaggerUrl":"https://nlu.playground.feersum.io/nlu/v2/swagger.json"
 }' https://generator.swagger.io/api/gen/clients/javascript)
