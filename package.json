@@ -1,5 +1,5 @@
 {
-  "name": "feersum_nlu_api",
+  "name": "@praekelt/feersum_nlu_api",
   "version": "2.0.3",
   "description": "This_is_the_HTTP_API_for_Feersum_NLU__See_httpsgithub_compraekeltfeersum_nlu_api_wrappers_for_examples_of_how_to_use_the_API_",
   "license": "Unlicense",
